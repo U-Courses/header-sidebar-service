@@ -1,14 +1,17 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "u-demo_header-sidebar",
+  "version": "1.0.0",
+  "description": "FEC udemy demo header-sidebar",
+  "author": "Alex Burkowsky",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "mysql": "^2.16.0"
+  },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
   }
