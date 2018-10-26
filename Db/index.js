@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const Promise = require('bluebird');
-const seedArray = require('./seed.js');
+const seeds = require('./seed.js');
 
 const connection = mysql.createConnection({
   user: 'root',
@@ -8,13 +8,13 @@ const connection = mysql.createConnection({
 
 const db = Promise.promisifyAll(connection, { multiArgs: true });
 
-const createTables = () => {
+const createTables = () => ( // change back to {} if gives any trouble
   // creates course table
-  return db.queryAsync(`
+  db.queryAsync(`
     CREATE TABLE IF NOT EXISTS Course (
       id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
       title VARCHAR(70),
-      description VARCHAR(400),
+      description VARCHAR(255),
       tag VARCHAR(13),
       avg_rating DECIMAL(2, 1),
       total_ratings INTEGER(3),
@@ -35,14 +35,14 @@ const createTables = () => {
       db.queryAsync(`
         CREATE TABLE IF NOT EXISTS CC (
           id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          cc_option VARCHAR(15)
+          cc_option VARCHAR(27)
       );`);
     })
     .then(() => {
       db.queryAsync(`
         CREATE TABLE IF NOT EXISTS Course_CC (
-          course_id INTEGER,
-          cc_id INTEGER     
+          course_id INTEGER(3),
+          cc_id INTEGER(1)     
       );`);
     })
     .then(() => {
@@ -52,15 +52,32 @@ const createTables = () => {
     })
     .then(() => {
       db.queryAsync(`
-        ALTER TABLE Course_CC ADD FOREIGN KEY (cc_id) REFERENCES Course (id);
+        ALTER TABLE Course_CC ADD FOREIGN KEY (cc_id) REFERENCES CC (id);
       `);
-    });
+    })
+);
+
+const populateCourseData = () => {
+  const { courseSeeds } = seeds;
+  const queryStr = 'INSERT INTO Course SET ?';
+  for (let i = 0; i < courseSeeds.length; i += 1) {
+    db.queryAsync(queryStr, courseSeeds[i]);
+  }
 };
 
-const createData = () => {
-  const queryStr = 'INSERT INTO Course SET ?';
-  for (let i = 0; i < seedArray.length; i += 1) {
-    db.queryAsync(queryStr, seedArray[i]);
+const populateCCData = () => {
+  const { ccSeeds } = seeds;
+  const queryStr = 'INSERT INTO CC SET ?';
+  for (let i = 0; i < ccSeeds.length; i += 1) {
+    db.queryAsync(queryStr, ccSeeds[i]);
+  }
+};
+
+const populateCourseCCData = () => {
+  const { courseCCSeeds } = seeds;
+  const queryStr = 'INSERT INTO Course_CC SET ?';
+  for (let i = 0; i < courseCCSeeds.length; i += 1) {
+    db.queryAsync(queryStr, courseCCSeeds[i]);
   }
 };
 
@@ -68,4 +85,9 @@ db.queryAsync('CREATE DATABASE IF NOT EXISTS headerSidebar')
   .then(() => console.log(`Connected to CheckoutData database as ID ${db.threadId}`))
   .then(() => db.queryAsync('USE headerSidebar'))
   .then(() => createTables(db))
-  .then(() => createData());
+  .then(() => populateCourseData())
+  .then(() => populateCCData())
+  .then(() => populateCourseCCData())
+  .catch((err) => {
+    throw new Error(err);
+  });
