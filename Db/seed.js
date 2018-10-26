@@ -106,52 +106,53 @@ const ccOptions = ['English', 'Spanish', 'Mandarin', 'Korean', 'Japanese', 'Germ
 
 const getRandomNum = max => Math.floor(Math.random() * Math.floor(max));
 
-const getRandomPrice = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
+const getRandomNumInRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const createCourseSeedData = () => {
   const tagLabel = ['Best Seller', 'Highest Rated', 'Hot & New', 'New', null];
   const languages = ['English', 'English, Spanish', 'English, Mandarin', 'English, Korean', 'English, Japanese'];
   return courses.map((course) => {
     const randomIdx = getRandomNum(tagLabel.length);
-    const listPrice = getRandomPrice(50, 300);
+    const listPrice = getRandomNumInRange(50, 300);
     const discPrice = Math.floor(listPrice * 0.10);
+    const enrollmentTotal = getRandomNumInRange(15, 105);
+    const ratingsTotal = getRandomNumInRange(10, enrollmentTotal);
     return ({
       title: course,
       description: faker.fake('{{lorem.sentence}}'),
       tag: tagLabel[randomIdx],
       avg_rating: Number((Math.random() * 5).toFixed(1)),
-      total_ratings: getRandomNum(105),
-      enrollment: getRandomNum(105),
+      total_ratings: ratingsTotal,
+      enrollment: enrollmentTotal,
       created_by: faker.name.findName(),
-      last_updated: `${Math.floor(Math.random() * (28 - 1) + 1)}/201${Math.floor(Math.random() * (9 - 5) + 5)}`,
+      // random date format: (1-28)/(2015-2018)
+      last_updated: `${getRandomNumInRange(1, 29)}/201${getRandomNumInRange(5, 9)}`,
       language: languages[randomIdx],
       img_url: faker.fake('{{image.imageUrl}}'),
       list_price: `$${listPrice}.99`,
       discount_price: `$${discPrice}.99`,
       video_hrs: Number((Math.random() * (30 - 12) + 12).toFixed(1)),
-      total_articles: Math.floor(Math.random() * (15 - 3) + 3),
-      total_downloads: Math.floor(Math.random() * (15 - 3) + 3),
+      total_articles: getRandomNumInRange(3, 15),
+      total_downloads: getRandomNumInRange(3, 15),
       active_coupon: 'ILOVEUDEMO',
     });
   });
 };
 
-const createCCSeedData = () => {
-  return ccOptions.map((option) => {
-    return ({
-      cc_option: option,
-    });
-  });
-};
+const createCCSeedData = () => (
+  ccOptions.map(option => ({
+    cc_option: option,
+  }))
+);
 
 const createCourseCCData = () => {
   // should account for the 100 courses.
   // should account for the 9 CC options.
   const courseCCSeedData = [];
-  for (let i = 1; i < 101; i += 1) {
+  // start i at 1 because id's in table start at 1
+  for (let i = 1; i < courses.length + 1; i += 1) {
     // get random number between 0 and 2 for number of additional CC options on course
-    const totalCCOptions = Math.floor(Math.random() * 3);
+    const totalCCOptions = getRandomNum(3);
     // create ccOptions object for english
     courseCCSeedData.push({
       course_id: i,
@@ -161,7 +162,7 @@ const createCourseCCData = () => {
     for (let j = 0; j < totalCCOptions; j += 1) {
       courseCCSeedData.push({
         course_id: i,
-        cc_id: Math.floor(Math.random() * ((ccOptions.length + 1) - 2) + 2),
+        cc_id: getRandomNumInRange(2, ccOptions.length + 1),
       });
     }
   }

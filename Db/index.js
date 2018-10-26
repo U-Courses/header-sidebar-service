@@ -2,9 +2,7 @@ const mysql = require('mysql');
 const Promise = require('bluebird');
 const seeds = require('./seed.js');
 
-const connection = mysql.createConnection({
-  user: 'root',
-});
+const connection = mysql.createConnection({ user: 'root' });
 
 const db = Promise.promisifyAll(connection, { multiArgs: true });
 
@@ -60,25 +58,25 @@ const createTables = () => ( // change back to {} if gives any trouble
 const populateCourseData = () => {
   const { courseSeeds } = seeds;
   const queryStr = 'INSERT INTO Course SET ?';
-  for (let i = 0; i < courseSeeds.length; i += 1) {
-    db.queryAsync(queryStr, courseSeeds[i]);
-  }
+  courseSeeds.forEach((seed) => {
+    db.queryAsync(queryStr, seed);
+  });
 };
 
 const populateCCData = () => {
   const { ccSeeds } = seeds;
   const queryStr = 'INSERT INTO CC SET ?';
-  for (let i = 0; i < ccSeeds.length; i += 1) {
-    db.queryAsync(queryStr, ccSeeds[i]);
-  }
+  ccSeeds.forEach((seed) => {
+    db.queryAsync(queryStr, seed);
+  });
 };
 
 const populateCourseCCData = () => {
   const { courseCCSeeds } = seeds;
   const queryStr = 'INSERT INTO Course_CC SET ?';
-  for (let i = 0; i < courseCCSeeds.length; i += 1) {
-    db.queryAsync(queryStr, courseCCSeeds[i]);
-  }
+  courseCCSeeds.forEach((seed) => {
+    db.queryAsync(queryStr, seed);
+  });
 };
 
 db.queryAsync('CREATE DATABASE IF NOT EXISTS headerSidebar')
