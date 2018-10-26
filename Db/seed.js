@@ -1,9 +1,5 @@
 const faker = require('faker');
 
-const getRandomNum = max => Math.floor(Math.random() * Math.floor(max));
-
-const getRandomPrice = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
 const courses = [
   'React & Redux for Beginners',
   'Advanced Guide to Bootstrap',
@@ -106,19 +102,22 @@ const courses = [
   'Telepathic Animal Healing 101',
   'Animal Communication For beginners',
 ];
-
 const ccOptions = ['English', 'Spanish', 'Mandarin', 'Korean', 'Japanese', 'German', 'Russian', 'French', 'Italian'];
+
+const getRandomNum = max => Math.floor(Math.random() * Math.floor(max));
+
+const getRandomPrice = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
 
 const createCourseSeedData = () => {
   const tagLabel = ['Best Seller', 'Highest Rated', 'Hot & New', 'New', null];
   const languages = ['English', 'English, Spanish', 'English, Mandarin', 'English, Korean', 'English, Japanese'];
-  const seedData = [];
-  for (let i = 0; i < courses.length; i += 1) {
+  return courses.map((course) => {
     const randomIdx = getRandomNum(tagLabel.length);
     const listPrice = getRandomPrice(50, 300);
     const discPrice = Math.floor(listPrice * 0.10);
-    seedData.push({
-      title: courses[i],
+    return ({
+      title: course,
       description: faker.fake('{{lorem.sentence}}'),
       tag: tagLabel[randomIdx],
       avg_rating: Number((Math.random() * 5).toFixed(1)),
@@ -135,18 +134,15 @@ const createCourseSeedData = () => {
       total_downloads: Math.floor(Math.random() * (15 - 3) + 3),
       active_coupon: 'ILOVEUDEMO',
     });
-  }
-  return seedData;
+  });
 };
 
 const createCCSeedData = () => {
-  const ccSeedData = [];
-  for (let i = 0; i < ccOptions.length; i += 1) {
-    ccSeedData.push({
-      cc_option: ccOptions[i],
+  return ccOptions.map((option) => {
+    return ({
+      cc_option: option,
     });
-  }
-  return ccSeedData;
+  });
 };
 
 const createCourseCCData = () => {
