@@ -10,6 +10,7 @@
   "scripts": {},
   "dependencies": {
     "bluebird": "^3.5.2",
+    "faker": "^4.1.0",
     "mysql": "^2.16.0"
   },
   "devDependencies": {
