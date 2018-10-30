@@ -14,19 +14,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // fetch(`/course/${this.state.courseId}`)
-    //   .then((response) => {
-    //     if (response.ok) {
-    //       return response.json();
-    //     }
-    //     throw new Error(response.status);
-    //   })
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((err) => {
-    //     console.error(err);
-    //   });
     requests.getCourseData(this.state.courseId)
       .then(data => {
         this.setState({
