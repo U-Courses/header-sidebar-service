@@ -29,7 +29,7 @@ class App extends React.Component {
         <div className="row"></div>
         <div className="row">
           <Header />
-          <Sidebar />
+          <Sidebar data={ this.state.courseData }/>
         </div>
       </div>
     )

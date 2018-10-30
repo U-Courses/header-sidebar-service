@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = (props) => (
+const Header = props => (
   <div className="left-col">
     <div className="header-container">
       <section className="titles header-row">
