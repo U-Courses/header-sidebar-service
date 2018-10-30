@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js --ignore node_modules",
+    "start": "nodemon server/index.js --ignore node_modules ",
     "test": "",
     "seed": "node db/index.js",
     "build": "webpack -d --watch"

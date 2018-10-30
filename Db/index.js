@@ -6,7 +6,7 @@ const connection = mysql.createConnection({ user: 'root' });
 
 const db = Promise.promisifyAll(connection, { multiArgs: true });
 
-const createTables = () => ( // change back to {} if gives any trouble
+const createTables = () => (
   // creates course table
   db.queryAsync(`
     CREATE TABLE IF NOT EXISTS Course (
@@ -17,7 +17,7 @@ const createTables = () => ( // change back to {} if gives any trouble
       avg_rating DECIMAL(2, 1),
       total_ratings INTEGER(3),
       enrollment INTEGER(3),
-      created_by VARCHAR(25),
+      created_by VARCHAR(40),
       last_updated VARCHAR(7),
       language VARCHAR(25),
       img_url VARCHAR(100),
@@ -76,14 +76,18 @@ const populateCourseCCData = () => {
   return Promise.all(promises);
 };
 
-db.queryAsync('CREATE DATABASE IF NOT EXISTS headerSidebar')
+db.queryAsync('DROP DATABASE IF EXISTS headerSidebar')
+  .then(() => db.queryAsync('CREATE DATABASE IF NOT EXISTS headerSidebar'))
   .then(() => console.log(`Connected to CheckoutData database as ID ${db.threadId}`))
   .then(() => db.queryAsync('USE headerSidebar'))
   .then(() => createTables(db))
   .then(() => populateCourseData())
   .then(() => populateCCData())
   .then(() => populateCourseCCData())
+  .then(() => db.end())
   .then(() => process.exit())
   .catch((err) => {
     throw new Error(err);
   });
+
+module.exports = db;

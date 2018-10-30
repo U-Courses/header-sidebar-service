@@ -12,5 +12,8 @@ module.exports = {
         "modules": true,
         "experimentalObjectRestSpread": true
     }
-}
+  },
+  "globals": {
+    "fetch": true
+  }
 };
