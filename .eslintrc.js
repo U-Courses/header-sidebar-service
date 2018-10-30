@@ -1,10 +1,19 @@
-/**
- * These rules enforce the Hack Reactor Style Guide
- *
- * Visit this repo for more information:
- *   https://github.com/reactorcore/eslint-config-hackreactor
- */
-
 module.exports = {
-  extends: './node_modules/eslint-config-hackreactor/index.js'
+  "extends": "airbnb-base", 
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/jsx-uses-react": 1
+  }, 
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "experimentalObjectRestSpread": true
+    }
+  },
+  "globals": {
+    "fetch": true
+  }
 };
