@@ -58,25 +58,22 @@ const createTables = () => ( // change back to {} if gives any trouble
 const populateCourseData = () => {
   const { courseSeeds } = seeds;
   const queryStr = 'INSERT INTO Course SET ?';
-  courseSeeds.forEach((seed) => {
-    db.queryAsync(queryStr, seed);
-  });
+  const promises = courseSeeds.map(seed => db.queryAsync(queryStr, seed));
+  return Promise.all(promises);
 };
 
 const populateCCData = () => {
   const { ccSeeds } = seeds;
   const queryStr = 'INSERT INTO CC SET ?';
-  ccSeeds.forEach((seed) => {
-    db.queryAsync(queryStr, seed);
-  });
+  const promises = ccSeeds.map(seed => db.queryAsync(queryStr, seed));
+  return Promise.all(promises);
 };
 
 const populateCourseCCData = () => {
   const { courseCCSeeds } = seeds;
   const queryStr = 'INSERT INTO Course_CC SET ?';
-  courseCCSeeds.forEach((seed) => {
-    db.queryAsync(queryStr, seed);
-  });
+  const promises = courseCCSeeds.map(seed => db.queryAsync(queryStr, seed));
+  return Promise.all(promises);
 };
 
 db.queryAsync('CREATE DATABASE IF NOT EXISTS headerSidebar')
@@ -86,6 +83,7 @@ db.queryAsync('CREATE DATABASE IF NOT EXISTS headerSidebar')
   .then(() => populateCourseData())
   .then(() => populateCCData())
   .then(() => populateCourseCCData())
+  .then(() => process.exit())
   .catch((err) => {
     throw new Error(err);
   });
