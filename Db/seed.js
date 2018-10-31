@@ -114,14 +114,14 @@ const createCourseSeedData = () => {
   return courses.map((course) => {
     const randomIdx = getRandomNum(tagLabel.length);
     const listPrice = getRandomNumInRange(50, 300);
-    const discPrice = Math.floor(listPrice * 0.10);
+    const discPrice = Math.floor(listPrice * (getRandomNumInRange(10, 20) * 0.01));
     const enrollmentTotal = getRandomNumInRange(15, 105);
     const ratingsTotal = getRandomNumInRange(10, enrollmentTotal);
     return ({
       title: course,
-      description: faker.fake('{{lorem.sentence}}'),
+      description: faker.fake('{{lorem.sentence}} {{lorem.sentence}}'),
       tag: tagLabel[randomIdx],
-      avg_rating: Number((Math.random() * 5).toFixed(1)),
+      avg_rating: Number((Math.random() * (5 - 3.4) + 3.4).toFixed(1)),
       total_ratings: ratingsTotal,
       enrollment: enrollmentTotal,
       created_by: faker.name.findName(),
@@ -132,7 +132,7 @@ const createCourseSeedData = () => {
       list_price: `$${listPrice}.99`,
       discount_price: `$${discPrice}.99`,
       video_hrs: Number((Math.random() * (30 - 12) + 12).toFixed(1)),
-      total_articles: getRandomNumInRange(3, 15),
+      total_articles: getRandomNumInRange(1, 15),
       total_downloads: getRandomNumInRange(3, 15),
       active_coupon: 'ILOVEUDEMO',
     });

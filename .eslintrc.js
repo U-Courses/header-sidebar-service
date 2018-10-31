@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": "airbnb-base", 
+  "extends": "airbnb", 
   "plugins": [
     "react"
   ],
@@ -15,5 +15,10 @@ module.exports = {
   },
   "globals": {
     "fetch": true
-  }
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+    },
 };

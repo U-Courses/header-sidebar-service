@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
-import requests from './requests.js'
+import requests from './lib/requests.js'
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      courseId: 1,
+      courseId: 5,
       courseData: {},
     };
   }
@@ -24,11 +24,12 @@ class App extends React.Component {
   }
 
   render() {
+    
     return (
       <div className="container">
         <div className="row"></div>
         <div className="row">
-          <Header />
+          <Header data={ this.state.courseData }/>
           <Sidebar data={ this.state.courseData }/>
         </div>
       </div>
