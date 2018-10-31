@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TagRatingsEnroll = ({ data }) => (
-  <section className="tag_ratings_enroll header-row">
+  <section className="tag_ratings_enroll">
     <div className="tag">{ data.tag }</div>
     <div className="ratings">
       <div className="stars"></div>

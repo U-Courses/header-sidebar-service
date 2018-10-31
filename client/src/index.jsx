@@ -26,8 +26,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="row"></div>
-        <div className="row">
+        <div className="row top-row">
+          <div className="gift-text">Gift this course</div>
+          <div className="heart">HEART</div>
+        </div>
+        <div className="row content-box">
           <Header data={ this.state.courseData }/>
           <Sidebar data={ this.state.courseData }/>
         </div>

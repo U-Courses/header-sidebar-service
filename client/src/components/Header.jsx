@@ -4,7 +4,7 @@ import TagRatingsEnroll from './TagRatingsEnroll.jsx';
 const Header = ({ data }) => (
   <div className="left-col">
     <div className="header-container">
-      <section className="titles header-row">
+      <section className="titles">
         <h1>{ data.title }</h1>
         <h3>{ data.description }</h3>
       </section>
