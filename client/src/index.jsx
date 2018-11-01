@@ -1,42 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header.jsx';
-import Sidebar from './components/Sidebar.jsx';
-import requests from './lib/requests.js'
-
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      courseId: 5,
-      courseData: {},
-    };
-  }
-
-  componentDidMount() {
-    requests.getCourseData(this.state.courseId)
-      .then(data => {
-        this.setState({
-          courseId: data.id,
-          courseData: data
-        })
-      })
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <div className="row top-row">
-          <div className="gift-text">Gift this course</div>
-          <div className="heart">HEART</div>
-        </div>
-        <div className="row content-box">
-          <Header data={ this.state.courseData }/>
-          <Sidebar data={ this.state.courseData }/>
-        </div>
-      </div>
-    )
-  }
-}
+import App from './components/App.jsx';
 
 ReactDOM.render(<App />, document.getElementById('headerSidebar'));

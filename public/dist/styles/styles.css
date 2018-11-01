@@ -1,42 +1,30 @@
-/* Rows */
-.container {
-  width: 100%;
+.banner {
+  width:100%;
+  padding-bottom: 60px;
   background-color: #505763;
   color: #fff;
+  min-width: 750px;
 }
-.row {
-  margin-left: 1em;
-  margin-right: 1em;
+
+.container {
+  width: 100%;
 }
 
 .top-row {
- display: flex;
- flex-direction: row;
- justify-content: flex-end;
- padding-right: 1em;
- padding-top: 1em;
- padding-bottom: 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
-.side-bar-container, .top-row {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-/* Top Row */
-.gift-text {
-  margin-right: 1em;
-  color: #cacbcc;
-}
-
-.gift-text:hover {
-  color:hsl(0, 0%, 62%);
-  cursor: pointer;
-}
-
-/* Bottom-Row Container */
-.content-box {
+.content-box, .top-row-content, .right-col {
   display: flex;
+  justify-content: flex-end;
+}
+
+.gift-text{
+  padding-right: 10px;
+}
+
+.top-row-content, .right-col {
+  padding-right: 15%;
 }
 
 .left-col {
@@ -46,6 +34,23 @@
 .right-col {
   width: calc(100% * 1/3);
 }
+
+.header-container {
+  padding-left: 15%;
+}
+
+/* Top Row */
+.gift-text {
+  color: #cacbcc;
+}
+
+.gift-text:hover {
+  color:hsl(0, 0%, 62%);
+  cursor: pointer;
+}
+
+/* Bottom-Row Container */
+
 
 /* Header */
 h1 {
@@ -58,6 +63,7 @@ h3 {
 
 /* Sidebar */
 .side-bar-container {
+  position: absolute;
   color: #505763;
   background-color: #fff;
 }
