@@ -1,5 +1,7 @@
 import React from 'react';
 import TagRatingsEnroll from './TagRatingsEnroll.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ data }) => (
   <div className="left-col">
@@ -17,9 +19,13 @@ const Header = ({ data }) => (
       </section>
       <section className ="languages-container">
         <div className="languages">
-          <div className="icon"></div>
+          <div className="speech-icon">
+            <FontAwesomeIcon icon={ fas.faComment } style={ {color: 'white'} }/>
+          </div>
           <div className="lang-text">{ data.language }</div>
-          <div className="icon"></div>
+          <div className="cc-icon">
+            <FontAwesomeIcon icon={ fas.faClosedCaptioning } style={ {color: 'white'} }/>
+          </div>
           <div className="cc-text">
           { data.ccOptions && 
               <span>{ `${data.ccOptions.join(', ')} [Auto-generated]` }</span>

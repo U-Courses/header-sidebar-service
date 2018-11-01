@@ -95,6 +95,23 @@ h3, .tag-ratings-enroll, .author-update {
   padding-right: 15px;
 }
 
+.languages-container {
+  width: 100%;
+}
+
+.languages {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.speech-icon, .cc-icon {
+  padding-right: 2px;
+}
+
+.lang-text {
+  padding-right: 15px;
+}
+
 /* Sidebar */
 .side-bar-container {
   position: absolute;
