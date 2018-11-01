@@ -1,14 +1,14 @@
 import React from 'react';
 
-const TagRatingsEnroll = ({ data }) => (
+const TagRatingsEnroll = ({ course }) => (
   <section className="tag-ratings-enroll">
-    <div className="tag">{ data.tag }</div>
+    <div className="tag">{ course.tag }</div>
     <div className="ratings">
-      <div className="stars"></div>
-      <div className="avg-rating">{ data.avg_rating }</div>
-      <div className="total-ratings">{ `(${data.total_ratings} ratings)` }</div>
+      <span className="stars">Stars</span>
+      <span className="avg-rating">{ course.avg_rating }</span>
+      <span className="total-ratings">{ `(${course.total_ratings} ratings)` }</span>
     </div>
-    <div className="enrollment">{ `${data.enrollment} students enrolled` }</div>
+    <div className="enrollment">{ `${course.enrollment} students enrolled` }</div>
   </section>
 );
 

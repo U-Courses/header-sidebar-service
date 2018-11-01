@@ -8,12 +8,14 @@ const Header = ({ data }) => (
         <h1>{ data.title }</h1>
         <h3>{ data.description }</h3>
       </section>
-      <TagRatingsEnroll data={ data } />
-      <section className ="author_update_lang">
-        <div className="author_update">
+      <TagRatingsEnroll course={ data } />
+      <section className ="author-update-container">
+        <div className="author-update">
           <div className="author">{ `Created by ${data.created_by}` }</div>
           <div className="update">{ `Last updated ${data.last_updated}` }</div>
         </div>
+      </section>
+      <section className ="languages-container">
         <div className="languages">
           <div className="icon"></div>
           <div className="lang-text">{ data.language }</div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
-import requests from '../lib/requests.js'
+import requests from '../lib/requests.js';
+import TopRow from './TopRow.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,12 +27,7 @@ class App extends React.Component {
     return (
       <div className="banner">
         <div className="container">
-          <div className="row top-row">
-            <div className="top-row-content">
-              <div className="gift-text">Gift this course</div>
-              <div className="heart">HEART</div>
-            </div>
-          </div>
+          <TopRow />
           <div className="row content-box">
             <Header data={ this.state.courseData }/>
             <Sidebar data={ this.state.courseData }/>
