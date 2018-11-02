@@ -7,7 +7,12 @@
   min-width: 795px;
 }
 
-/* Remove me after testing */
+/* Remove me after testing 
+*
+*
+*
+*
+*/
 #belowContent {
   height: 2000px;
 }
@@ -61,7 +66,7 @@ h1 {
 h3, .tag-ratings-enroll, .author-update {
   margin-bottom: 8px;
 }
-
+/* tag and ratings */
 .tag-ratings-enroll {
   display: flex;
   justify-content: flex-start;
@@ -96,7 +101,7 @@ h3, .tag-ratings-enroll, .author-update {
   right: -6.3px;
   vertical-align: baseline;
 }
-
+/* Stars */
 .stars {
   padding-right: 10px;
 }
@@ -116,7 +121,7 @@ h3, .tag-ratings-enroll, .author-update {
 .avg-rating {
   padding-right: 2px;
 }
-
+/* Author and update */
 .author-update-container {
   width: 100%
 }
@@ -135,6 +140,7 @@ h3, .tag-ratings-enroll, .author-update {
   width: 100%;
 }
 
+/* languages */
 .languages {
   display: flex;
   justify-content: flex-start;
@@ -154,4 +160,17 @@ h3, .tag-ratings-enroll, .author-update {
   color: #505763;
   background-color: #fff;
   width: 20%;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.trailer-box, .trailer-container, .trailer{
+  width: 100%;
+  max-height: 200px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }

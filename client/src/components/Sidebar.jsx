@@ -37,7 +37,7 @@ class Sidebar extends React.Component {
     return (
       <div className="right-col">
         <div className="side-bar-container">
-          <Trailer />
+          <Trailer img={ course.img_url }/>
           <div className="below-trailer">
             <PurchaseBox discount_price={ course.discount_price } list_price={ course.list_price } />
             <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
