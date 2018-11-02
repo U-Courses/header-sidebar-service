@@ -1,15 +1,33 @@
 import React from 'react';
 
 const TagRatingsEnroll = ({ course }) => {
-  let tagMargin;
-  if (course.tag) {
-    tagMargin = {'margin-right': '15px'};
-  } else {
-    tagMargin = {};
+  // Add margin if tag present
+  const tagStyle = () => {
+    const style = {};
+    if (course.tag) {
+      style.marginRight = '15px';
+    }
+
+    if (course.tag === 'Best Seller') {
+      style.background = '#f4c150';
+    } else if (course.tag === 'Highest Rated') {
+      style.background = '#f59c49';
+    } else if (course.tag === 'Hot & New') {
+      style.background = '#ec5252';
+      style.color = '#fff';
+    } else if (course.tag === 'New') {
+      style.background = '#46c28e';
+      style.color = '#fff';
+    }
+
+    return style;
   }
+
   return(
     <section className="tag-ratings-enroll">
-      <div className="tag" style={ tagMargin }>{ course.tag }</div>
+    { course.tag &&
+      <div className="tag" style={ tagStyle() }>{ course.tag }</div> // Render if tag is not null
+    }
       <div className="ratings">
         <span className="stars">Stars</span>
         <span className="avg-rating">{ course.avg_rating }</span>

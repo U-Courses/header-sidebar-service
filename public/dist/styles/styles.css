@@ -74,9 +74,25 @@ h3, .tag-ratings-enroll, .author-update {
 }
 
 .tag {
-  background: #f4c150;
+  position: relative;
   color: #29303b;
   border-radius: 3px;
+  padding: 2px;
+  padding-right: 10px;
+  z-index: 1;
+}
+
+.tag:after {
+  content: "";
+  background: inherit;
+  border-radius: 3px;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: -1;
+  width: 16.3px;
+  height: 16.3px;
+  top: 3.05px;
+  right: -6.1px;
 }
 
 .stars {

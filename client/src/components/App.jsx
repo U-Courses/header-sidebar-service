@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      courseId: 5,
+      courseId: 7,
       courseData: {},
     };
   }
