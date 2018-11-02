@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      courseId: 11,
+      courseId: 12,
       courseData: {},
     };
   }
@@ -29,8 +29,8 @@ class App extends React.Component {
         <div className="container">
           <TopRow />
           <div className="row content-box">
-            <Header data={ this.state.courseData }/>
-            <Sidebar data={ this.state.courseData }/>
+            <Header course={ this.state.courseData }/>
+            <Sidebar course={ this.state.courseData }/>
           </div>
         </div>
       </div>

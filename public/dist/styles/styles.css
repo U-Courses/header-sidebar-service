@@ -7,8 +7,15 @@
   min-width: 795px;
 }
 
+/* Remove me after testing */
+#belowContent {
+  height: 2000px;
+}
+
 .container {
-  width: 100%;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .top-row {
@@ -24,20 +31,12 @@
   padding-right: 10px;
 }
 
-.top-row-content, .right-col {
-  padding-right: 15%;
-}
-
 .left-col {
   width: calc(100% * 2/3);
 }
 
 .right-col {
   width: calc(100% * 1/3);
-}
-
-.header-container {
-  padding-left: 15%;
 }
 
 /* Top Row */
@@ -81,7 +80,7 @@ h3, .tag-ratings-enroll, .author-update {
   padding-right: 10px;
   z-index: 1;
   vertical-align: baseline;
-  top: -1px;
+  top: -3px;
 }
 
 .tag:after {
@@ -94,12 +93,12 @@ h3, .tag-ratings-enroll, .author-update {
   width: 16.3px;
   height: 16.3px;
   top: 3.05px;
-  right: -6.1px;
+  right: -6.3px;
   vertical-align: baseline;
 }
 
 .stars {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .fullStar svg * {
@@ -154,5 +153,5 @@ h3, .tag-ratings-enroll, .author-update {
   position: absolute;
   color: #505763;
   background-color: #fff;
-  width: 25%
+  width: 20%;
 }

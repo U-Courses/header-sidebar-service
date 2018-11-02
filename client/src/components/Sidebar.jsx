@@ -25,11 +25,11 @@ class Sidebar extends React.Component {
   }
   
   render() {
-    const { data } = this.props;
+    const { course } = this.props;
     
     let coupon;
     if (!this.state.hasCoupon) {
-      coupon = <CouponDefault couponClickHandler={ this.couponClickHandler } active_coupon={ data.active_coupon } />;
+      coupon = <CouponDefault couponClickHandler={ this.couponClickHandler } active_coupon={ course.active_coupon } />;
     } else {
       coupon = <CouponForm />;
     }
@@ -39,10 +39,10 @@ class Sidebar extends React.Component {
         <div className="side-bar-container">
           <Trailer />
           <div className="below-trailer">
-            <PurchaseBox discount_price={ data.discount_price } list_price={ data.list_price } />
-            <Features video_hrs={ data.video_hrs } total_articles={ data.total_articles }
+            <PurchaseBox discount_price={ course.discount_price } list_price={ course.list_price } />
+            <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
             />
-            <Interactives total_downloads={ data.total_downloads }/>
+            <Interactives total_downloads={ course.total_downloads }/>
             <section className="coupon-box">
               { coupon } 
             </section>
