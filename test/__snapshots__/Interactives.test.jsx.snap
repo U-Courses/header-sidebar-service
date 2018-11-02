@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly text component 1`] = `
+<section
+  className="interactives-box"
+>
+  <div
+    className="interactives"
+  >
+    <div>
+      <strong>
+        Interactive Features
+      </strong>
+    </div>
+    <ul
+      className="total-resources"
+    >
+      <li>
+        <span
+          className="feature-icon"
+        />
+        <span
+          className="feature-text"
+        >
+          undefined downloadable resources
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

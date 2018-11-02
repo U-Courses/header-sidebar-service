@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders correctly 1`] = `
+<div
+  className="left-col"
+>
+  <div
+    className="header-container"
+  >
+    <section
+      className="titles"
+    >
+      <h1>
+        React & Redux for Beginners
+      </h1>
+      <h3>
+        Iste qui quia in.
+      </h3>
+    </section>
+    <section
+      className="tag-ratings-enroll"
+    >
+      <div
+        className="tag"
+        style={
+          Object {
+            "background": "#ec5252",
+            "color": "#fff",
+            "marginRight": "15px",
+          }
+        }
+      >
+        Hot & New
+      </div>
+      <div
+        className="ratings"
+      >
+        <span>
+          <span
+            className="stars"
+          >
+            <span
+              className="fullStar"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-star fa-w-18 "
+                data-icon="star"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+            <span
+              className="fullStar"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-star fa-w-18 "
+                data-icon="star"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+            <span
+              className="fullStar"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-star fa-w-18 "
+                data-icon="star"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+            <span
+              className="fullStar"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-star fa-w-18 "
+                data-icon="star"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+            <span
+              className="partialStar"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-star fa-w-18 "
+                data-icon="star"
+                data-prefix="fas"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+          </span>
+          <svg
+            height="0"
+            width="0"
+          >
+            <linearGradient
+              id="starPartialFill"
+            >
+              <stop
+                offset="0%"
+                stopColor="#f4c150"
+              />
+              <stop
+                offset="90%"
+                stopColor="#f4c150"
+              />
+              <stop
+                offset="90%"
+                stopColor="#dedfe0"
+              />
+              <stop
+                offset="100%"
+                stopColor="#dedfe0"
+              />
+            </linearGradient>
+            <linearGradient
+              id="starEmpty"
+            >
+              <stop
+                offset="100%"
+                stopColor="#dedfe0"
+              />
+            </linearGradient>
+            <linearGradient
+              id="starFilled"
+            >
+              <stop
+                offset="100%"
+                stopColor="#f4c150"
+              />
+            </linearGradient>
+          </svg>
+        </span>
+        <span
+          className="avg-rating"
+        >
+          4.9
+        </span>
+        <span
+          className="total-ratings"
+        >
+          (41 ratings)
+        </span>
+      </div>
+      <div
+        className="enrollment"
+      >
+        51 students enrolled
+      </div>
+    </section>
+    <section
+      className="author-update-container"
+    >
+      <div
+        className="author-update"
+      >
+        <div
+          className="author"
+        >
+          Created by Sibyl Roberts
+        </div>
+        <div
+          className="update"
+        >
+          Last updated 21/2015
+        </div>
+      </div>
+    </section>
+    <section
+      className="languages-container"
+    >
+      <div
+        className="languages"
+      >
+        <div
+          className="speech-icon"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-comment fa-w-16 "
+            data-icon="comment"
+            data-prefix="fas"
+            role="img"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+        <div
+          className="lang-text"
+        >
+          English, Mandarin
+        </div>
+        <div
+          className="cc-icon"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-closed-captioning fa-w-16 "
+            data-icon="closed-captioning"
+            data-prefix="fas"
+            role="img"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM218.1 287.7c2.8-2.5 7.1-2.1 9.2.9l19.5 27.7c1.7 2.4 1.5 5.6-.5 7.7-53.6 56.8-172.8 32.1-172.8-67.9 0-97.3 121.7-119.5 172.5-70.1 2.1 2 2.5 3.2 1 5.7l-17.5 30.5c-1.9 3.1-6.2 4-9.1 1.7-40.8-32-94.6-14.9-94.6 31.2.1 48 51.1 70.5 92.3 32.6zm190.4 0c2.8-2.5 7.1-2.1 9.2.9l19.5 27.7c1.7 2.4 1.5 5.6-.5 7.7-53.5 56.9-172.7 32.1-172.7-67.9 0-97.3 121.7-119.5 172.5-70.1 2.1 2 2.5 3.2 1 5.7L420 222.2c-1.9 3.1-6.2 4-9.1 1.7-40.8-32-94.6-14.9-94.6 31.2 0 48 51 70.5 92.2 32.6z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+        <div
+          className="cc-text"
+        >
+          <span>
+            English, Spanish [Auto-generated]
+          </span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
