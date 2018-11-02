@@ -60,7 +60,7 @@ h1 {
 }
 
 h3, .tag-ratings-enroll, .author-update {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .tag-ratings-enroll {
@@ -80,6 +80,8 @@ h3, .tag-ratings-enroll, .author-update {
   padding: 2px;
   padding-right: 10px;
   z-index: 1;
+  vertical-align: baseline;
+  top: -1px;
 }
 
 .tag:after {
@@ -93,10 +95,23 @@ h3, .tag-ratings-enroll, .author-update {
   height: 16.3px;
   top: 3.05px;
   right: -6.1px;
+  vertical-align: baseline;
 }
 
 .stars {
   padding-right: 15px;
+}
+
+.fullStar svg * {
+  fill: url(#starFilled);
+}
+
+.emptyStar svg * {
+  fill: url(#starEmpty);
+}
+
+.partialStar svg * {
+  fill: url(#starPartialFill);
 }
 
 .avg-rating {
