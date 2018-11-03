@@ -1,0 +1,79 @@
+.priceBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price {
+  padding: 5px 2px 10px 2px;
+}
+
+.discountPrice {
+  font-size: 2em;
+}
+
+.listPrice, .percentOffItem {
+  font-size: 1.2em;
+  color: #a1a7b3;
+}
+
+.listPrice {
+  text-decoration: line-through;
+}
+
+.btnBox, .guarantee {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; 
+}
+
+.cartAddBtn {
+  background-color: #ec5252;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.cartAddBtn:hover {
+  background-color: #902c2c;
+}
+
+.cartAddBtn:active {
+  background-color: #622323;
+}
+
+.buyBtn {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 1em;
+}
+
+.buyBtn:hover {
+  cursor: pointer;
+}
+
+.buyBtn:focus {
+  outline: 0;
+}
+
+.buyNowBtn {
+  color:#686f7a;
+  background-color: #fff;
+  border: 1px solid #686f7a;
+  border-radius: 2px;
+}
+
+.buyNowBtn:hover {
+  color: #29303b;
+  border: 1px solid #29303b;
+}
+
+.buyNowBtn:active {
+  background-color: #f9f9f9;
+}
+
+.guarantee {
+  font-size: 0.85em;
+  color: #6f7174;
+}

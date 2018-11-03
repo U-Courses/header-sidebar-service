@@ -6,7 +6,7 @@ import Interactives from './Interactives.jsx';
 import CouponDefault from './CouponDefault.jsx';
 import CouponForm from './CouponForm.jsx';
 import ShareBox from './ShareBox.jsx';
-import styles from '../styles/Sidebar.css'
+import styles from '../styles/Sidebar.css';
 
 class Sidebar extends React.Component {
   constructor(props) {

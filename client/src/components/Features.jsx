@@ -2,43 +2,44 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import styles from '../styles/Features.css';
 
 const Features = ({ video_hrs, total_articles }) => (
-  <section className="features">
+  <section>
     <div>
       <strong>Includes</strong>
     </div>
     <div>
       <ul>
         <li>
-          <span className="feature-icon">
+          <span className={ styles.featureIcon }>
             <FontAwesomeIcon icon={ far.faFileVideo } fixedWidth/>
           </span>
-          <span className="feature-text">{ `${video_hrs} hours on-demand video` }</span>
+          <span className={ styles.featureText }>{ `${video_hrs} hours on-demand video` }</span>
         </li>
         <li>
-          <span className="feature-icon">
+          <span className={ styles.featureIcon }>
             <FontAwesomeIcon icon={ far.faFile } fixedWidth/>
           </span>
-          <span className="feature-text">{ `${total_articles} ${articleOrArticles(total_articles)}` }</span>
+          <span className={ styles.featureText }>{ `${total_articles} ${articleOrArticles(total_articles)}` }</span>
         </li>
         <li>
-          <span className="feature-icon">
+          <span className={ styles.featureIcon }>
             <FontAwesomeIcon icon={ fas.faInfinity } fixedWidth/>
           </span>
-          <span className="feature-text">Full lifetime access</span>
+          <span className={ styles.featureText }>Full lifetime access</span>
         </li>
         <li>
-          <span className="feature-icon">
+          <span className={ styles.featureIcon }>
             <FontAwesomeIcon icon={ fas.faMobileAlt } fixedWidth/>
           </span>
-          <span className="feature-text">Access on mobile and TV</span>
+          <span className={ styles.featureText }>Access on mobile and TV</span>
         </li>
         <li>
-          <span className="feature-icon">
+          <span className={ styles.featureIcon }>
             <FontAwesomeIcon icon={ fas.faAtom } fixedWidth/>
           </span>
-          <span className="feature-text">Certificate of Completion</span>
+          <span className={ styles.featureText }>Certificate of Completion</span>
         </li>
       </ul>
     </div>
