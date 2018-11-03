@@ -278,7 +278,7 @@ h3, .tag-ratings-enroll, .author-update {
   text-decoration: line-through;
 }
 
-/* buy buttons */
+/* purchase box */
 
 .btn-box, .guarantee {
   width: 100%;
@@ -329,4 +329,17 @@ h3, .tag-ratings-enroll, .author-update {
 
 .buy-btn:hover {
   cursor: pointer;
+}
+
+.guarantee {
+  font-size: 0.85em;
+  font-color: #686f7a;
+}
+
+/* includes and interactive features */
+
+ul {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 1px;
 }
