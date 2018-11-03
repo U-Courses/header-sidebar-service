@@ -6,6 +6,7 @@ import Interactives from './Interactives.jsx';
 import CouponDefault from './CouponDefault.jsx';
 import CouponForm from './CouponForm.jsx';
 import ShareBox from './ShareBox.jsx';
+import styles from '../styles/Sidebar.css'
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -44,15 +45,15 @@ class Sidebar extends React.Component {
     }
 
     return (
-      <div className="right-col">
-        <div className="side-bar-container">
+      <div className={ styles.rightCol }>
+        <div className={ styles.sideBarContainer }>
           <Trailer img={ course.img_url } onTrailer={ this.state.pointerOnTrailer } trailerHoverHandler={ this.trailerHoverHandler }/>
-          <div className="below-trailer">
+          <div className={ styles.belowTrailer }>
             <PurchaseBox discount_price={ course.discount_price } list_price={ course.list_price } />
             <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
             />
             <Interactives total_downloads={ course.total_downloads }/>
-            <section className="coupon-box">
+            <section className={ styles.couponBox }>
               { coupon } 
             </section>
             <ShareBox />

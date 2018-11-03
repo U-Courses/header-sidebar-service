@@ -1,0 +1,35 @@
+.couponFormBtn:focus, .formInput:focus {
+  outline: 0;
+}
+
+.couponFormArea, .couponForm, .formGroup {
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  width: 100%;
+}
+
+.formInput {
+  flex-grow: 2;
+}
+.formInput, .couponFormBtn {
+  float: left;
+  clear: left;
+  padding: 1em;
+}
+
+.couponFormBtn {
+  background-color: #ec5252;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.couponFormBtn:hover {
+  background-color: #902c2c;
+}
+
+.couponFormBtn:active {
+  background-color: #622323;
+}

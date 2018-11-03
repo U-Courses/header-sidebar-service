@@ -1,0 +1,20 @@
+.defaultCouponArea {
+  display: flex;
+  justify-content: center;
+}
+
+.defaultCouponBtn {
+  border: none;
+  font-size: 1em;
+  font-weight: 300;
+  color: #0094aa;
+}
+
+.defaultCouponBtn:hover {
+  cursor: pointer;
+  color: #016c84;
+}
+
+.defaultCouponBtn:focus {
+  outline: 0;
+}

@@ -1,0 +1,15 @@
+.stars {
+  padding-right: 10px;
+}
+
+.fullStar svg * {
+  fill: url(#starFilled);
+}
+
+.emptyStar svg * {
+  fill: url(#starEmpty);
+}
+
+.partialStar svg * {
+  fill: url(#starPartialFill);
+}

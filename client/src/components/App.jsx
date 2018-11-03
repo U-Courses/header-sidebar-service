@@ -3,6 +3,7 @@ import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
 import requests from '../lib/requests.js';
 import TopRow from './TopRow.jsx';
+import styles from '../styles/App.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -25,14 +26,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="banner">
-        <div className="container">
-          <TopRow />
-          <div className="row content-box">
-            <Header course={ this.state.courseData }/>
-            <Sidebar course={ this.state.courseData }/>
+      <div>
+        <div className={ styles.banner }>
+          <div className={ styles.container }>
+            <TopRow />
+            <div className={ styles.contentBox }>
+              <Header course={ this.state.courseData }/>
+              <Sidebar course={ this.state.courseData }/>
+            </div>
           </div>
         </div>
+        <div className={ styles.belowContent }>Remove after Scroll Implementation</div> 
       </div>
     )
   }

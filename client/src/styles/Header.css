@@ -1,0 +1,59 @@
+.leftCol {
+  width: calc(100% * 2/3);
+}
+
+.titles {
+  width: 100%;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+
+h3, .tagRatingsEnroll, .authorUpdate {
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.tagRatingsEnroll, .authorUpdate, .languagesContainer {
+  font-weight: 200;
+}
+
+.authorUpdateContainer {
+  width: 100%
+}
+
+.authorUpdate {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.author {
+  padding-right: 15px;
+}
+
+.languagesContainer {
+  width: 100%;
+}
+
+.languages {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.speechIcon, .ccIcon {
+  padding-right: 3px;
+}
+
+.langText {
+  padding-right: 15px;
+}

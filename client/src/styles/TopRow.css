@@ -1,0 +1,28 @@
+.topRow {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.topRowContent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.giftText {
+  padding-right: 10px;
+  color: #cacbcc;
+}
+
+.giftText:hover {
+  color:hsl(0, 0%, 62%);
+  cursor: pointer;
+}
+
+.heart {
+  font-size: 1.5em;
+}
+
+.heart:hover {
+  cursor: pointer;
+}

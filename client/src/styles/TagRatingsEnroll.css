@@ -1,0 +1,48 @@
+h3, .tagRatingsEnroll, .authorUpdate {
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.tagRatingsEnroll, .authorUpdate, .languagesContainer {
+  font-weight: 200;
+}
+
+.tagRatingsEnroll {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.ratings {
+  margin-right: 15px;
+}
+
+.tag {
+  position: relative;
+  color: #29303b;
+  border-radius: 3px;
+  padding: 3px 10px 3px 3px;
+  z-index: 1;
+  vertical-align: baseline;
+  top: -2.6px;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.tag:after {
+  content: "";
+  background: inherit;
+  border-radius: 3px;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: -1;
+  width: 18.5px;
+  height: 16.7px;
+  top: 2.35px;
+  right: -8px;
+  vertical-align: baseline;
+}
+
+.avgRating {
+  padding-right: 2px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderStars from './HeaderStars.jsx'
+import styles from '../styles/TagRatingsEnroll.css'
 
 const TagRatingsEnroll = ({ course }) => {
   // Add margin if tag present
@@ -25,16 +26,16 @@ const TagRatingsEnroll = ({ course }) => {
   }
   
   return(
-    <section className="tag-ratings-enroll">
+    <section className={ styles.tagRatingsEnroll }>
     { course.tag &&
-      <div className="tag" style={ tagStyle() }>{ course.tag }</div> // Render if tag is not null
+      <div className={ styles.tag } style={ tagStyle() }>{ course.tag }</div> // Render if tag is not null
     }
-      <div className="ratings">
+      <div className={ styles.ratings }>
         <HeaderStars avgRating={ course.avg_rating }/>
-        <span className="avg-rating">{ course.avg_rating }</span>
-        <span className="total-ratings">{ `(${course.total_ratings} ratings)` }</span>
+        <span className={ styles.avgRating }>{ course.avg_rating }</span>
+        <span>{ `(${course.total_ratings} ratings)` }</span>
       </div>
-      <div className="enrollment">{ `${course.enrollment} students enrolled` }</div>
+      <div>{ `${course.enrollment} students enrolled` }</div>
     </section>
   )
 };

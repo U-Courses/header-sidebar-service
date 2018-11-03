@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import styles from '../styles/HeaderStars.css'
 
 const HeaderStars = ({ avgRating }) => {
 
@@ -18,11 +19,11 @@ const HeaderStars = ({ avgRating }) => {
     const stars = [];
     for (let i = 1; i < 6; i += 1) {
       if (avgRating >= i) {
-        stars.push(<span className="fullStar" key={i} ><FontAwesomeIcon icon={ faStar } /></span>)
+        stars.push(<span className={ styles.fullStar } key={i} ><FontAwesomeIcon icon={ faStar } /></span>)
       } else if (Math.ceil(avgRating) === i) {
-        stars.push(<span className="partialStar" key={i} ><FontAwesomeIcon icon={ faStar } /></span>)
+        stars.push(<span className={ styles.partialStar } key={i} ><FontAwesomeIcon icon={ faStar } /></span>)
       } else {
-        stars.push(<span className="emptyStar" key={i} ><FontAwesomeIcon icon={ faStar } /></span>)
+        stars.push(<span className={ styles.emptyStar } key={i} ><FontAwesomeIcon icon={ faStar } /></span>)
       }
     }
     return stars;
@@ -30,7 +31,7 @@ const HeaderStars = ({ avgRating }) => {
 
   return (
     <span>
-      <span className="stars">
+      <span className={ styles.stars }>
       {
         getStars()
       }
