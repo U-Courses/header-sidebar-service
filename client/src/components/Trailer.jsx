@@ -1,17 +1,23 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
-const Trailer = props => (
-  <section className="trailer-box">
-    <div className="trailer-container">
-      <div className="trailer">
-        <img alt="" src={ props.img } />
-        <button className="playbtn"></button>
-        <span>Preview this course</span>
+const Trailer = props => {
+  const btnSize = () => props.onTrailer ? { fontSize: '5em' } : { fontSize: '3em' };
+
+  return (
+    <section className="trailer-box">
+      <div className="trailer-container">
+        <div className="trailer">
+          <img alt="" className="course-img sidebar-img" src="http://www.avsnap.com/a_downloads/backgrounds/SpaceT%20640x480.png" />
+          <div className="playbtn sidebar-img"  onMouseEnter={ () => props.trailerHoverHandler() } onMouseLeave={ () => props.trailerHoverHandler() }>
+            <FontAwesomeIcon className ="playbtn-icon" icon={ faPlayCircle } style={ btnSize() }/>
+          </div>
+          <span className="trailer-text sidebar-img">Preview this course</span>
+        </div>
       </div>
-      {/* <div className="trailer-img">
-      </div> */}
-    </div>
-  </section>
-);
+    </section>
+  )
+};
 
 export default Trailer;

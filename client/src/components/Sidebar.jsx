@@ -13,14 +13,23 @@ class Sidebar extends React.Component {
     this.state = {
       hasCoupon: false,
       couponCode: null,
+      pointerOnTrailer: false,
+
     };
     this.couponClickHandler = this.couponClickHandler.bind(this);
+    this.trailerHoverHandler = this.trailerHoverHandler.bind(this);
   }
 
   couponClickHandler(couponCode) {
     this.setState({ 
       hasCoupon: true,
       couponCode: couponCode
+    });
+  }
+
+  trailerHoverHandler() {
+    this.setState({
+      pointerOnTrailer: !this.state.pointerOnTrailer
     });
   }
   
@@ -37,7 +46,7 @@ class Sidebar extends React.Component {
     return (
       <div className="right-col">
         <div className="side-bar-container">
-          <Trailer img={ course.img_url }/>
+          <Trailer img={ course.img_url } onTrailer={ this.state.pointerOnTrailer } trailerHoverHandler={ this.trailerHoverHandler }/>
           <div className="below-trailer">
             <PurchaseBox discount_price={ course.discount_price } list_price={ course.list_price } />
             <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
