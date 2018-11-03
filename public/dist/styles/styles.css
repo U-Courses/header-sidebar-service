@@ -331,7 +331,7 @@ h3, .tag-ratings-enroll, .author-update {
   cursor: pointer;
 }
 
-.guarantee {
+.guarantee, .feature-text, .feature-icon {
   font-size: 0.85em;
   font-color: #686f7a;
 }
@@ -341,5 +341,9 @@ h3, .tag-ratings-enroll, .author-update {
 ul {
   list-style: none;
   margin-top: 5px;
-  padding-left: 1px;
+  padding-left: 3px;
+}
+
+.feature-text {
+  padding-left: 10px
 }
