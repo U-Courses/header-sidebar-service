@@ -8,7 +8,7 @@ const PurchaseBox = ({ discount_price, list_price }) => (
       <div className="percent-off price"><span>{ `${percentOff(discount_price, list_price)} off` }</span></div>
     </div>
     <div className="btn-box">
-      <button id="cart-add-btn" className="buy-btn">Add to Cart</button>
+      <button id="cart-add-btn" className="buy-btn red-btn">Add to Cart</button>
     </div>
     <div className="btn-box">
       <button id="buy-now-btn" className="buy-btn">Buy now</button>

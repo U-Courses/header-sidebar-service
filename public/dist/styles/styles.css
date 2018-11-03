@@ -111,11 +111,10 @@ h3, .tag-ratings-enroll, .author-update {
   position: relative;
   color: #29303b;
   border-radius: 3px;
-  padding: 2px;
-  padding-right: 10px;
+  padding: 3px 10px 3px 3px;
   z-index: 1;
   vertical-align: baseline;
-  top: -3px;
+  top: -2.6px;
   font-weight: 400;
   font-size: 0.9em;
 }
@@ -127,10 +126,10 @@ h3, .tag-ratings-enroll, .author-update {
   position: absolute;
   transform: rotate(45deg);
   z-index: -1;
-  width: 16.3px;
-  height: 16.3px;
-  top: 3.05px;
-  right: -6.3px;
+  width: 18.5px;
+  height: 16.7px;
+  top: 2.35px;
+  right: -8px;
   vertical-align: baseline;
 }
 /* Stars */
@@ -189,7 +188,7 @@ h3, .tag-ratings-enroll, .author-update {
 /* Sidebar */
 .side-bar-container {
   position: absolute;
-  color: #505763;
+  color: #343e4f;
   background-color: #fff;
   width: 20%;
   box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
@@ -287,7 +286,7 @@ h3, .tag-ratings-enroll, .author-update {
   justify-content: center; 
 }
 
-#cart-add-btn {
+.red-btn {
   background-color: #ec5252;
   color: #fff;
   border: 1px solid transparent;
@@ -331,12 +330,21 @@ h3, .tag-ratings-enroll, .author-update {
   cursor: pointer;
 }
 
-.guarantee, .feature-text, .feature-icon {
-  font-size: 0.85em;
-  font-color: #686f7a;
+/* includes and interactive features */
+
+.interactive-header {
+  display: flex;
+  align-items: center;
 }
 
-/* includes and interactive features */
+.interactive-header-text {
+  padding-right: 2px;
+}
+
+.guarantee, .feature-text, .feature-icon {
+  font-size: 0.85em;
+  font-color: #184951;
+}
 
 ul {
   list-style: none;
@@ -347,3 +355,60 @@ ul {
 .feature-text {
   padding-left: 10px
 }
+
+.total-resources {
+  margin-bottom: 10px;
+}
+
+/* Coupon */
+.coupon-box {
+  width: 100%;
+  height: 3em;
+}
+.default-coupon-area {
+  display: flex;
+  justify-content: center;
+}
+
+.default-coupon-btn {
+  border: none;
+  font-size: 1em;
+  font-weight: 300;
+  color: #0094aa;
+}
+
+.default-coupon-btn:hover {
+  cursor: pointer;
+  color: #016c84;
+}
+
+.default-coupon-btn:focus, .coupon-form-btn:focus, .form-input:focus {
+  outline: 0;
+}
+
+.coupon-form-area, .coupon-form, .form-group {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-input {
+  flex-grow: 2;
+}
+.form-input, .coupon-form-btn {
+  float: left;
+  clear: left;
+  padding: 1em;
+}
+
+.coupon-form-btn:hover {
+  background-color: #902c2c;
+}
+
+.coupon-form-btn:active {
+  background-color: #622323;
+}
+

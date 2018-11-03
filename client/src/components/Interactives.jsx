@@ -1,12 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Interactives = ({ total_downloads }) => (
   <section className="interactives-box">
     <div className="interactives">
-      <div>
-        <strong>Interactive Features</strong>
+      <div className="interactive-header">
+        <strong className="interactive-header-text">Interactive Features</strong>
+        <FontAwesomeIcon icon={ faInfoCircle } fixedWidth/>
       </div>
       <ul className="total-resources" >
       <li>

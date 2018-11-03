@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Trailer = props => {
-  const btnSize = () => props.onTrailer ? { fontSize: '5em' } : { fontSize: '3em' };
+  const btnSize = () => props.onTrailer ? { fontSize: '5em', transition: '0.5s' } : { fontSize: '3em', transition: '0.5s' };
 
   return (
     <section className="trailer-box">
