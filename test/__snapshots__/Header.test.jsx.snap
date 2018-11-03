@@ -2,11 +2,9 @@
 
 exports[`<Header /> renders correctly 1`] = `
 <div
-  className="left-col"
+  className="leftCol"
 >
-  <div
-    className="header-container"
-  >
+  <div>
     <section
       className="titles"
     >
@@ -18,7 +16,7 @@ exports[`<Header /> renders correctly 1`] = `
       </h3>
     </section>
     <section
-      className="tag-ratings-enroll"
+      className="tagRatingsEnroll"
     >
       <div
         className="tag"
@@ -183,27 +181,23 @@ exports[`<Header /> renders correctly 1`] = `
           </svg>
         </span>
         <span
-          className="avg-rating"
+          className="avgRating"
         >
           4.9
         </span>
-        <span
-          className="total-ratings"
-        >
+        <span>
           (41 ratings)
         </span>
       </div>
-      <div
-        className="enrollment"
-      >
+      <div>
         51 students enrolled
       </div>
     </section>
     <section
-      className="author-update-container"
+      className="authorUpdateContainer"
     >
       <div
-        className="author-update"
+        className="authorUpdate"
       >
         <div
           className="author"
@@ -218,13 +212,13 @@ exports[`<Header /> renders correctly 1`] = `
       </div>
     </section>
     <section
-      className="languages-container"
+      className="languagesContainer"
     >
       <div
         className="languages"
       >
         <div
-          className="speech-icon"
+          className="speechIcon"
         >
           <svg
             aria-hidden="true"
@@ -248,12 +242,12 @@ exports[`<Header /> renders correctly 1`] = `
           </svg>
         </div>
         <div
-          className="lang-text"
+          className="langText"
         >
           English, Mandarin
         </div>
         <div
-          className="cc-icon"
+          className="ccIcon"
         >
           <svg
             aria-hidden="true"
@@ -276,9 +270,7 @@ exports[`<Header /> renders correctly 1`] = `
             />
           </svg>
         </div>
-        <div
-          className="cc-text"
-        >
+        <div>
           <span>
             English, Spanish [Auto-generated]
           </span>
