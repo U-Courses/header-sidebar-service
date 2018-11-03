@@ -4,7 +4,7 @@
   padding-bottom: 60px;
   background-color: #29303b;
   color: #fff;
-  min-width: 795px;
+  min-width: 975px;
 }
 
 /* Remove me after testing 
@@ -28,7 +28,14 @@
   padding-top: 10px;
   padding-bottom: 20px;
 }
-.content-box, .top-row-content, .right-col {
+
+.top-row-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content-box, .right-col {
   display: flex;
   justify-content: flex-end;
 }
@@ -55,18 +62,40 @@
   cursor: pointer;
 }
 
+.heart {
+  font-size: 1.5em;
+}
+
 .heart:hover {
   cursor: pointer;
 }
 
 /* Header */
+.titles {
+  width: 100%;
+}
+
 h1 {
   margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
 }
 
 h3, .tag-ratings-enroll, .author-update {
-  margin-bottom: 8px;
+  width: 100%;
+  padding-bottom: 8px;
 }
+
+.tag-ratings-enroll, .author-update, .languages-container {
+  font-weight: 200;
+}
+
 /* tag and ratings */
 .tag-ratings-enroll {
   display: flex;
@@ -82,11 +111,12 @@ h3, .tag-ratings-enroll, .author-update {
   position: relative;
   color: #29303b;
   border-radius: 3px;
-  padding: 2px;
-  padding-right: 10px;
+  padding: 3px 10px 3px 3px;
   z-index: 1;
   vertical-align: baseline;
-  top: -3px;
+  top: -2.6px;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 
 .tag:after {
@@ -96,10 +126,10 @@ h3, .tag-ratings-enroll, .author-update {
   position: absolute;
   transform: rotate(45deg);
   z-index: -1;
-  width: 16.3px;
-  height: 16.3px;
-  top: 3.05px;
-  right: -6.3px;
+  width: 18.5px;
+  height: 16.7px;
+  top: 2.35px;
+  right: -8px;
   vertical-align: baseline;
 }
 /* Stars */
@@ -158,20 +188,262 @@ h3, .tag-ratings-enroll, .author-update {
 /* Sidebar */
 .side-bar-container {
   position: absolute;
-  color: #505763;
+  color: #343e4f;
   background-color: #fff;
   width: 20%;
   box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
   border-radius: 5px;
   padding: 3px;
+  min-width: 215px;
 }
 
-.trailer-box, .trailer-container, .trailer{
+.below-trailer {
+  padding: 5%;
+}
+
+/* trailer */
+.trailer-box, .trailer-container{
   width: 100%;
-  max-height: 200px;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
+.trailer {
+  position: relative;
+  width: 100%;
+  max-height: 180px;
+}
+
+.sidebar-img {
+  max-width:100%;
+  max-height: 180px;
+}
+
+.trailer-text {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.playbtn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playbtn:hover {
+  cursor: pointer;
+
+}
+
+.playbtn-icon {
+  position: relative;
+  color: white;
+  opacity: 0.6;
+}
+
+.course-img {
+  width: 100%
+}
+
+/* price */
+.price-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price {
+  padding: 5px 2px 10px 2px;
+}
+
+.discount-price {
+  font-size: 2em;
+}
+
+.list-price, .percent-off {
+  font-size: 1.2em;
+  color: #a1a7b3;
+}
+
+.list-price {
+  text-decoration: line-through;
+}
+
+/* purchase box */
+
+.btn-box, .guarantee {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; 
+}
+
+.red-btn {
+  background-color: #ec5252;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+#cart-add-btn:hover {
+  background-color: #902c2c;
+}
+
+#cart-add-btn:active {
+  background-color: #622323;
+}
+
+.buy-btn:focus {
+  outline: 0;
+}
+
+#buy-now-btn {
+  color:#686f7a;
+  background-color: #fff;
+  border: 1px solid #686f7a;
+  border-radius: 2px;
+}
+
+#buy-now-btn:hover {
+  color: #29303b;
+  border: 1px solid #29303b;
+}
+
+#buy-now-btn:active {
+  background-color: #f9f9f9;
+}
+
+.buy-btn {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 1em;
+}
+
+.buy-btn:hover {
+  cursor: pointer;
+}
+
+/* includes and interactive features */
+
+.interactive-header {
+  display: flex;
+  align-items: center;
+}
+
+.interactive-header-text {
+  padding-right: 2px;
+}
+
+.guarantee, .feature-text, .feature-icon {
+  font-size: 0.85em;
+  color: #6f7174;
+}
+
+ul {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 3px;
+}
+
+li {
+  padding-bottom: 3.5px;
+}
+
+.feature-text {
+  padding-left: 10px
+}
+
+.total-resources {
+  margin-bottom: 10px;
+}
+
+/* Coupon */
+.coupon-box {
+  width: 100%;
+  height: 3em;
+}
+.default-coupon-area {
+  display: flex;
+  justify-content: center;
+}
+
+.default-coupon-btn {
+  border: none;
+  font-size: 1em;
+  font-weight: 300;
+  color: #0094aa;
+}
+
+.default-coupon-btn:hover {
+  cursor: pointer;
+  color: #016c84;
+}
+
+.default-coupon-btn:focus, .coupon-form-btn:focus, .form-input:focus {
+  outline: 0;
+}
+
+.coupon-form-area, .coupon-form, .form-group {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-input {
+  flex-grow: 2;
+}
+.form-input, .coupon-form-btn {
+  float: left;
+  clear: left;
+  padding: 1em;
+}
+
+.coupon-form-btn:hover {
+  background-color: #902c2c;
+}
+
+.coupon-form-btn:active {
+  background-color: #622323;
+}
+
+/* Share Box */
+
+.delineation {
+  width: 100;
+  margin-bottom: 30px;
+  border-top: 1px solid #e8e9eb
+}
+
+.share-invite-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.share, .invite {
+  padding-bottom: 10px;
+}
+
+.share-text:after {
+  content: " *";
+  white-space: pre;
+  color: #00819b
+}
+
+.invite-icon {
+  padding-right: 5px;
+  color: #00819b;
+}
+
+.invite-text {
+  color: #0094aa;
 }
