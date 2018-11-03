@@ -28,7 +28,14 @@
   padding-top: 10px;
   padding-bottom: 20px;
 }
-.content-box, .top-row-content, .right-col {
+
+.top-row-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content-box, .right-col {
   display: flex;
   justify-content: flex-end;
 }
@@ -55,23 +62,38 @@
   cursor: pointer;
 }
 
+.heart {
+  font-size: 1.5em;
+}
+
 .heart:hover {
   cursor: pointer;
 }
 
 /* Header */
+.titles {
+  width: 100%;
+}
+
 h1 {
   margin-top: 0px;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 h3 {
   margin-top: 0px;
   margin-bottom: 0px;
+  font-weight: 400;
 }
 
 h3, .tag-ratings-enroll, .author-update {
-  padding-bottom: 10px;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.tag-ratings-enroll, .author-update, .languages-container {
+  font-weight: 200;
 }
 
 /* tag and ratings */
@@ -94,6 +116,8 @@ h3, .tag-ratings-enroll, .author-update {
   z-index: 1;
   vertical-align: baseline;
   top: -3px;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 
 .tag:after {
