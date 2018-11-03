@@ -1,8 +1,8 @@
 import React from 'react';
-import TagRatingsEnroll from './TagRatingsEnroll.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import styles from '../styles/Header.css'
+import TagRatingsEnroll from './TagRatingsEnroll.jsx';
+import styles from '../styles/Header.css';
 
 const Header = ({ course }) => (
   <div className={ styles.leftCol }>
@@ -21,15 +21,15 @@ const Header = ({ course }) => (
       <section className={ styles.languagesContainer }>
         <div className={ styles.languages }>
           <div className={ styles.speechIcon }>
-            <FontAwesomeIcon icon={ fas.faComment } style={ {color: 'white'} }/>
+            <FontAwesomeIcon icon={ fas.faComment } style={ { color: 'white' } }/>
           </div>
           <div className={ styles.langText }>{ course.language }</div>
           <div className={ styles.ccIcon }>
-            <FontAwesomeIcon icon={ fas.faClosedCaptioning } style={ {color: 'white'} }/>
+            <FontAwesomeIcon icon={ fas.faClosedCaptioning } style={ { color: 'white' } }/>
           </div>
           <div>
-          { course.ccOptions && 
-              <span>{ `${course.ccOptions.join(', ')} [Auto-generated]` }</span>
+          { course.ccOptions
+              && <span>{ `${course.ccOptions.join(', ')} [Auto-generated]` }</span>
           }
           </div>
         </div>

@@ -22,24 +22,24 @@ class Sidebar extends React.Component {
   }
 
   couponClickHandler(couponCode) {
-    this.setState({ 
+    this.setState({
       hasCoupon: true,
-      couponCode: couponCode
+      couponCode,
     });
   }
 
   trailerHoverHandler() {
     this.setState({
-      pointerOnTrailer: !this.state.pointerOnTrailer
+      pointerOnTrailer: !this.state.pointerOnTrailer,
     });
   }
-  
+
   render() {
     const { course } = this.props;
-    
     let coupon;
     if (!this.state.hasCoupon) {
-      coupon = <CouponDefault couponClickHandler={ this.couponClickHandler } active_coupon={ course.active_coupon } />;
+      coupon = <CouponDefault couponClickHandler={ this.couponClickHandler }
+        active_coupon={ course.active_coupon } />;
     } else {
       coupon = <CouponForm />;
     }
@@ -47,14 +47,16 @@ class Sidebar extends React.Component {
     return (
       <div className={ styles.rightCol }>
         <div className={ styles.sideBarContainer }>
-          <Trailer img={ course.img_url } onTrailer={ this.state.pointerOnTrailer } trailerHoverHandler={ this.trailerHoverHandler }/>
+          <Trailer img={ course.img_url } onTrailer={ this.state.pointerOnTrailer }
+            trailerHoverHandler={ this.trailerHoverHandler }/>
           <div className={ styles.belowTrailer }>
-            <PurchaseBox discount_price={ course.discount_price } list_price={ course.list_price } />
+            <PurchaseBox discount_price={ course.discount_price }
+              list_price={ course.list_price } />
             <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
             />
             <Interactives total_downloads={ course.total_downloads }/>
             <section className={ styles.couponBox }>
-              { coupon } 
+              { coupon }
             </section>
             <ShareBox />
           </div>
@@ -62,6 +64,6 @@ class Sidebar extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Sidebar;

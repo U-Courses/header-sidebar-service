@@ -3,7 +3,7 @@ import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
 import requests from '../lib/requests.js';
 import TopRow from './TopRow.jsx';
-import styles from '../styles/App.css'
+import styles from '../styles/App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,12 +16,12 @@ class App extends React.Component {
 
   componentDidMount() {
     requests.getCourseData(this.state.courseId)
-      .then(data => {
+      .then(data => (
         this.setState({
           courseId: data.id,
-          courseData: data
+          courseData: data,
         })
-      })
+      ));
   }
 
   render() {
@@ -36,9 +36,9 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        <div className={ styles.belowContent }>Remove after Scroll Implementation</div> 
+        <div className={ styles.belowContent }>Remove after Scroll Implementation</div>
       </div>
-    )
+    );
   }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/CouponForm.css'
+import styles from '../styles/CouponForm.css';
 
 const CouponForm = props => (
   <div className={ styles.couponFormArea }>

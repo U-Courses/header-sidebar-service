@@ -1,24 +1,34 @@
 module.exports = {
-  "extends": "airbnb", 
-  "plugins": [
-    "react"
-  ],
-  "rules": {
-    "react/jsx-uses-react": 1
-  }, 
-  "parserOptions": {
-    "ecmaFeatures": {
-        "jsx": true,
-        "modules": true,
-        "experimentalObjectRestSpread": true
-    }
-  },
-  "globals": {
-    "fetch": true
-  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb-base", 'plugin:react/recommended'],
   "env": {
+    "browser": true,
     "node": true,
-    "es6": true,
-    "browser": true
-    },
+    "jest": true,
+  },
 };
+
+// module.exports = {
+//   "extends": "airbnb", 
+//   "plugins": [
+//     "react"
+//   ],
+//   "rules": {
+//     "react/jsx-uses-react": 1
+//   }, 
+//   "parserOptions": {
+//     "ecmaFeatures": {
+//         "jsx": true,
+//         "modules": true,
+//         "experimentalObjectRestSpread": true
+//     }
+//   },
+//   "globals": {
+//     "fetch": true
+//   },
+//   "env": {
+//     "node": true,
+//     "es6": true,
+//     "browser": true
+//     },
+// };

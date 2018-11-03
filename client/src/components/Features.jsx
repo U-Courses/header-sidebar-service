@@ -4,6 +4,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/Features.css';
 
+const articleOrArticles = hours => (hours === 1 ? 'article' : 'articles');
+
 const Features = ({ video_hrs, total_articles }) => (
   <section>
     <div>
@@ -45,7 +47,5 @@ const Features = ({ video_hrs, total_articles }) => (
     </div>
   </section>
 );
-
-const articleOrArticles = (hours) => hours === 1 ? 'article' : 'articles';
 
 export default Features;
