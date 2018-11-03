@@ -270,7 +270,7 @@ h3, .tag-ratings-enroll, .author-update {
 
 .list-price, .percent-off {
   font-size: 1.2em;
-  color: #a1a7b3
+  color: #a1a7b3;
 }
 
 .list-price {
@@ -352,6 +352,10 @@ ul {
   padding-left: 3px;
 }
 
+li {
+  padding-bottom: 3.5px;
+}
+
 .feature-text {
   padding-left: 10px
 }
@@ -412,3 +416,34 @@ ul {
   background-color: #622323;
 }
 
+/* Share Box */
+
+.delineation {
+  width: 100;
+  margin-bottom: 30px;
+  border-top: 1px solid #e8e9eb
+}
+
+.share-invite-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.share, .invite {
+  padding-bottom: 10px;
+}
+
+.share-text:after {
+  content: " *";
+  white-space: pre;
+  color: #00819b
+}
+
+.invite-icon {
+  padding-right: 5px;
+  color: #00819b;
+}
+
+.invite-text {
+  color: #0094aa;
+}

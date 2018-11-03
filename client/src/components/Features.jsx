@@ -26,7 +26,7 @@ const Features = ({ video_hrs, total_articles }) => (
           <span className="feature-icon">
             <FontAwesomeIcon icon={ fas.faInfinity } fixedWidth/>
           </span>
-          <span className="feature-text">Full Lifetime Access</span>
+          <span className="feature-text">Full lifetime access</span>
         </li>
         <li>
           <span className="feature-icon">
