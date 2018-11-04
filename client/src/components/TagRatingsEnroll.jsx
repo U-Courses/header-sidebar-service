@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderStars from './HeaderStars.jsx';
 import styles from '../styles/TagRatingsEnroll.css';
 
-const TagRatingsEnroll = ({ course }) => {
+const TagRatingsEnroll = ({ course, isHeaderFixed }) => {
   // Add margin if tag present
   const tagStyle = () => {
     const style = {};
@@ -26,7 +26,7 @@ const TagRatingsEnroll = ({ course }) => {
   };
   return (
     <section className={ styles.tagRatingsEnroll }>
-    { course.tag
+    { (course.tag && !isHeaderFixed)
       && <div className={ styles.tag }
         style={ tagStyle() }>{ course.tag }</div> // Render if tag is not null
     }
