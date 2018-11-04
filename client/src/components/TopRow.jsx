@@ -42,8 +42,9 @@ class TopRow extends React.Component {
       <div className={ styles.topRow }>
         <div className={ styles.topRowContent }>
           <div className={ styles.giftText }>Gift This Course</div>
-          <div className={ styles.heart }>
-            <FontAwesomeIcon icon={ heart } style={ { color: 'rgb(236, 82, 82)' } } onMouseEnter={ () => this.handleHover() } onMouseLeave={ () => this.handleHover() } onClick={ () => this.handleClick() }/>
+          <div className={ styles.heart } onClick={ () => this.handleClick() }
+            onMouseEnter={ () => this.handleHover() } onMouseLeave={ () => this.handleHover() }>
+            <FontAwesomeIcon icon={ heart } style={ { color: 'rgb(236, 82, 82)' } } />
           </div>
         </div>
       </div>

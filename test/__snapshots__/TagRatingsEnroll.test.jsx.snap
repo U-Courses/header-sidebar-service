@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagRatingsEnroll /> renders correctly 1`] = `
+<section
+  className="tagRatingsEnroll"
+>
+  <div
+    className="tag"
+    style={
+      Object {
+        "background": "#ec5252",
+        "color": "#fff",
+        "marginRight": "15px",
+      }
+    }
+  >
+    Hot & New
+  </div>
+  <div
+    className="ratings"
+  >
+    <span>
+      <span
+        className="stars"
+      >
+        <span
+          className="fullStar"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-star fa-w-18 "
+            data-icon="star"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+        <span
+          className="fullStar"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-star fa-w-18 "
+            data-icon="star"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+        <span
+          className="fullStar"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-star fa-w-18 "
+            data-icon="star"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+        <span
+          className="fullStar"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-star fa-w-18 "
+            data-icon="star"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+        <span
+          className="partialStar"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-star fa-w-18 "
+            data-icon="star"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </span>
+      <svg
+        height="0"
+        width="0"
+      >
+        <linearGradient
+          id="starPartialFill"
+        >
+          <stop
+            offset="0%"
+            stopColor="#f4c150"
+          />
+          <stop
+            offset="90%"
+            stopColor="#f4c150"
+          />
+          <stop
+            offset="90%"
+            stopColor="#dedfe0"
+          />
+          <stop
+            offset="100%"
+            stopColor="#dedfe0"
+          />
+        </linearGradient>
+        <linearGradient
+          id="starEmpty"
+        >
+          <stop
+            offset="100%"
+            stopColor="#dedfe0"
+          />
+        </linearGradient>
+        <linearGradient
+          id="starFilled"
+        >
+          <stop
+            offset="100%"
+            stopColor="#f4c150"
+          />
+        </linearGradient>
+      </svg>
+    </span>
+    <span
+      className="avgRating"
+    >
+      4.9
+    </span>
+    <span>
+      (41 ratings)
+    </span>
+  </div>
+  <div>
+    51 students enrolled
+  </div>
+</section>
+`;
