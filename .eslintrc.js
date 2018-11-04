@@ -6,6 +6,12 @@ module.exports = {
     "node": true,
     "jest": true,
   },
+  "rules": {
+    "import/extensions": ['error', 'always', {
+      "js": "ignorePackages",
+      "jsx": "ignorePackages",
+    }],
+  },
 };
 
 // module.exports = {
