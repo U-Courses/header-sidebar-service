@@ -5,12 +5,12 @@
 .trailer {
   position: relative;
   width: 100%;
-  max-height: 180px;
+  max-height: 200px;
 }
 
 .sidebarImg {
   max-width:100%;
-  max-height: 180px;
+  max-height: 200px;
 }
 
 .courseImg {

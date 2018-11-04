@@ -10,11 +10,11 @@
 }
 
 .discountPrice {
-  font-size: 2em;
+  font-size: 2vw;
 }
 
 .listPrice, .percentOffItem {
-  font-size: 1.2em;
+  font-size: 1.2vw;
   color: #a1a7b3;
 }
 
