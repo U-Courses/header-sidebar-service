@@ -78,7 +78,6 @@ class App extends React.Component {
           ? <FixedHeader course={ this.state.courseData } />
           : null
         }
-        <div className={ styles.belowContent }>Remove after Scroll Implementation</div>
       </div>
     );
   }

@@ -5,16 +5,6 @@
   color: #fff;
   min-width: 975px;
 }
-/* Remove me after testing 
-*
-*
-*
-*
-*/
-.belowContent {
-  height: 2000px;
-  background-color: red;
-}
 
 .container {
   width: 70%;
