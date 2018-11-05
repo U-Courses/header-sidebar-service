@@ -12,6 +12,7 @@ const HeaderStars = ({ avgRating }) => {
     if (decimal !== '0') {
       return `${decimal}0%`;
     }
+    return '0%';
   };
 
   const getStars = () => {
