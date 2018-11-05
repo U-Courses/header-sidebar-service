@@ -22,18 +22,25 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const bannerHeight = document.querySelector('.App__banner___3EFF9').offsetHeight;
-    const topRowHeight = document.querySelector('.TopRow__topRow___SvI7h').offsetHeight;
-    const trailerHeight = document.querySelector('.Trailer__trailerBox___28ieD').offsetHeight + 3;
-    const distanceToBelowTrailer = topRowHeight + trailerHeight;
     window.addEventListener('scroll', this.handleScroll);
+    // Need to setTimeout to allow time to properly mount and calculate proper offsetHeight
+    setTimeout(() => {
+      const bannerHeight = document.querySelector('.App__banner___3EFF9').offsetHeight;
+      const topRowHeight = document.querySelector('.TopRow__topRow___SvI7h').offsetHeight;
+      const trailerHeight = document.querySelector('.Trailer__trailerBox___28ieD').offsetHeight + 3;
+      const distanceToBelowTrailer = topRowHeight + trailerHeight;
+      this.setState({
+        bannerHeight,
+        distanceToBelowTrailer,
+      });
+    });
     requests.getCourseData(this.state.courseId)
       .then(data => (
         this.setState({
           courseId: data.id,
           courseData: data,
-          bannerHeight,
-          distanceToBelowTrailer,
+          // bannerHeight,
+          // distanceToBelowTrailer,
         })
       ));
   }
