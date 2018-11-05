@@ -16,4 +16,14 @@ describe('<TopRow />', () => {
     wrapper.find('.heart').simulate('click');
     expect(wrapper.state('clicked')).toEqual(true);
   });
+  it('should update state on heart hover', () => {
+    const wrapper = shallow(<TopRow />);
+    wrapper.find('.heart').simulate('mouseEnter');
+    expect(wrapper.state('hover')).toEqual(true);
+  });
+  it('should update state after heart hover mouse leave', () => {
+    const wrapper = shallow(<TopRow />);
+    wrapper.find('.heart').simulate('mouseLeave');
+    expect(wrapper.state('hover')).toEqual(true);
+  });
 });
