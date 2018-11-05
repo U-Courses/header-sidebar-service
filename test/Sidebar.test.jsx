@@ -38,8 +38,8 @@ describe('<Sidebar />', () => {
   //   const wrapper = shallow(<Header course={ sampleProps }/>);
   //   expect(wrapper.find(TagRatingsEnroll).length).toEqual(1);
   // });
-  it('should render on heart click', () => {
-    const wrapper = shallow(<Sidebar course={ sampleProps }/>);
+  it('should render coupon form on default coupon button click', () => {
+    const wrapper = mount(<Sidebar course={ sampleProps }/>);
     wrapper.find('.defaultCouponBtn').simulate('click');
     expect(wrapper.state('hasCoupon')).toEqual(true);
   });
