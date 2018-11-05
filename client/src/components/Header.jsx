@@ -11,7 +11,7 @@ const Header = ({ course }) => (
         <h1>{ course.title }</h1>
         <h3>{ course.description }</h3>
       </section>
-      <TagRatingsEnroll course={ course } />
+      <TagRatingsEnroll course={ course } isHeaderFixed={ false }/>
       <section className={ styles.authorUpdateContainer }>
         <div className={ styles.authorUpdate }>
           <div className={ styles.author }>{ `Created by ${course.created_by}` }</div>
