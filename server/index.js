@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const models = require('./models/model.js');
 
-const PORT = 3001;
+const PORT = 3003;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
