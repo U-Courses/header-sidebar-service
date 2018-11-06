@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      courseId: 11,
+      courseId: null,
       courseData: {},
       headerFixed: false,
       sidebarFixed: false,
@@ -34,7 +34,8 @@ class App extends React.Component {
         distanceToBelowTrailer,
       });
     });
-    requests.getCourseData(this.state.courseId)
+    // requests.getCourseData(this.state.courseId)
+    requests.getCourseData(window.location.pathname)
       .then(data => (
         this.setState({
           courseId: data.id,
