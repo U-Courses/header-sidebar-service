@@ -12,7 +12,7 @@ app.listen(PORT, () => {
   console.log(`listening on http://localhost:${PORT}/`);
 });
 
-app.get('/course/:courseId', (req, res) => {
+app.get('/courses/:courseId/header', (req, res) => {
   const id = req.params.courseId;
   models.Course.getCourseData(id)
     .then((courseData) => {

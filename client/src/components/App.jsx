@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      courseId: 4,
+      courseId: 11,
       courseData: {},
       headerFixed: false,
       sidebarFixed: false,
