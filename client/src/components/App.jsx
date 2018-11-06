@@ -35,7 +35,8 @@ class App extends React.Component {
       });
     });
     // requests.getCourseData(this.state.courseId)
-    requests.getCourseData(window.location.pathname.slice(1))
+    // window.location.pathname === '/courses/66'
+    requests.getCourseData(window.location.pathname)
       .then(data => (
         this.setState({
           courseId: data.id,
