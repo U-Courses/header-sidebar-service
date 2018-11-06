@@ -1,6 +1,6 @@
 const requests = {
   getCourseData: coursePath => (
-    fetch(`${coursePath}/header`)
+    fetch(`${coursePath}header`)
       .then((response) => {
         if (response.ok) {
           return response.json();

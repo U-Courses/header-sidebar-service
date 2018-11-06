@@ -5,17 +5,13 @@ const models = require('./models/model.js');
 
 const PORT = 3003;
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-// app.use('/courses/*/header', express.static(path.join(__dirname, '/../public/dist')));
-app.use('/courses', express.static(path.join(__dirname, '/../public/dist')));
 app.listen(PORT, () => {
   console.log(`listening on http://localhost:${PORT}/`);
 });
-
-app.get('/courses/:courseId', (req, res) => {
-  res.sendFile((path.join(__dirname, '/../public/dist/index.html')));
-});
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+// cannot serve static files and data from the same API endpoints
+app.use('/courses/:courseId', express.static(path.join(__dirname, '/../public/dist')));
 
 app.get('/courses/:courseId/header', (req, res) => {
   const id = req.params.courseId;
