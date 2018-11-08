@@ -1,5 +1,6 @@
 .leftCol {
   width: calc(100% * 2/3);
+  margin-left:5%;
 }
 
 .titles {

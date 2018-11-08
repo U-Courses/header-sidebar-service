@@ -5,12 +5,12 @@ import styles from '../styles/Trailer.css';
 
 const Trailer = (props) => {
   const btnSize = () => (props.onTrailer ? { fontSize: '5em', transition: '0.5s' } : { fontSize: '3em', transition: '0.5s' });
-
+  // https://s3-us-west-1.amazonaws.com/fec-header-sidebar-photos/SpaceT+640x480.png
   return (
     <section className={ styles.trailerBox }>
       <div className={ styles.trailerContainer }>
         <div className={ styles.trailer }>
-          <img alt="" className={ `${styles.courseImg} ${styles.sidebarImg}` } src="http://www.avsnap.com/a_downloads/backgrounds/SpaceT%20640x480.png" />
+          <img alt="" className={ `${styles.courseImg} ${styles.sidebarImg}` } src="http://www.avsnap.com/a_downloads/backgrounds/SpaceT%20640x480.png" /> 
           <div className={ `${styles.playbtn} ${styles.sidebarImg}` }
             onMouseEnter={ () => props.trailerHoverHandler() }
             onMouseLeave={ () => props.trailerHoverHandler() }>
