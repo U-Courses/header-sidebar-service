@@ -15,10 +15,25 @@ class FixedSidebar extends React.Component {
       hasCoupon: false,
       couponCode: null,
       pointerOnTrailer: false,
-
+      couponFormInput: '',
     };
     this.couponClickHandler = this.couponClickHandler.bind(this);
     this.trailerHoverHandler = this.trailerHoverHandler.bind(this);
+    this.couponInputChangeHandler = this.couponInputChangeHandler.bind(this);
+    this.couponSubmitHandler = this.couponSubmitHandler.bind(this);
+  }
+
+  couponInputChangeHandler({ target: { value } }) {
+    this.setState({
+      couponFormInput: value,
+    });
+  }
+
+  couponSubmitHandler(e) {
+    e.preventDefault();
+    if (this.state.couponFormInput === this.state.couponCode) {
+      this.props.changePrice();
+    }
   }
 
   couponClickHandler(couponCode) {
@@ -35,20 +50,22 @@ class FixedSidebar extends React.Component {
   }
 
   render() {
-    const { course } = this.props;
+    const { course, discountPrice } = this.props;
     let coupon;
     if (!this.state.hasCoupon) {
       coupon = <CouponDefault couponClickHandler={ this.couponClickHandler }
         active_coupon={ course.active_coupon } />;
     } else {
-      coupon = <CouponForm />;
+      coupon = <CouponForm couponInputValue={ this.state.couponFormInput }
+      couponInputChangeHandler={ this.couponInputChangeHandler }
+      couponSubmitHandler={ this.couponSubmitHandler }/>;
     }
 
     return (
       <div className={ styles.rightCol }>
         <div className={ fixedStyles.fixedSideBarContainer }>
           <div className={ styles.belowTrailer }>
-            <PurchaseBox discount_price={ course.discount_price }
+            <PurchaseBox discount_price={ discountPrice }
               list_price={ course.list_price } />
             <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
             />

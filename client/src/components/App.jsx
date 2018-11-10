@@ -13,12 +13,15 @@ class App extends React.Component {
     this.state = {
       courseId: null,
       courseData: {},
+      discountPrice: '',
+      couponUsed: false,
       headerFixed: false,
       sidebarFixed: false,
       bannerHeight: null,
       distanceToBelowTrailer: null,
     };
     this.handleScroll = this.handleScroll.bind(this);
+    this.changePrice = this.changePrice.bind(this);
   }
 
   componentDidMount() {
@@ -41,8 +44,8 @@ class App extends React.Component {
         this.setState({
           courseId: data.id,
           courseData: data,
-          // bannerHeight,
-          // distanceToBelowTrailer,
+          discountPrice: data.discount_price,
+          listPrice: data.list_price,
         })
       ));
   }
@@ -61,6 +64,17 @@ class App extends React.Component {
     }
   }
 
+  changePrice() {
+    const currentPrice = this.state.discountPrice;
+    const newPrice = `$${(Number((currentPrice).split('$')[1]) - 5).toFixed(2)}`;
+    if (!this.state.couponUsed) {
+      this.setState({
+        discountPrice: newPrice,
+        couponUsed: true,
+      });
+    }
+  }
+
   render() {
     return (
       <div>
@@ -70,8 +84,12 @@ class App extends React.Component {
             <div className={ styles.contentBox }>
               <Header course={ this.state.courseData }/>
               {this.state.sidebarFixed
-                ? <FixedSidebar course={ this.state.courseData }/>
-                : <Sidebar course={ this.state.courseData }/>
+                ? <FixedSidebar course={ this.state.courseData }
+                  discountPrice={ this.state.discountPrice }
+                  changePrice={ this.changePrice }/>
+                : <Sidebar course={ this.state.courseData }
+                  discountPrice={ this.state.discountPrice }
+                  changePrice={ this.changePrice }/>
               }
             </div>
           </div>
