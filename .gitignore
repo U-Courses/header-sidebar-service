@@ -23,3 +23,4 @@ coverage
 # Ignore these files
 db.sql
 bundle.js
+*.env
