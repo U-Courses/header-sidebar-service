@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon server/index.js --ignore node_modules ",
     "test": "jest --coverage",
-    "seed": "node db/index.js",
+    "seed": "node Db/index.js",
     "build": "webpack -d --watch"
   },
   "dependencies": {
