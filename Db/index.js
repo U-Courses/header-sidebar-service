@@ -4,16 +4,16 @@ const seeds = require('./seed.js');
 require('dotenv').config();
 
 // use below to run locally
-// const connection = mysql.createConnection({ user: 'root' });
+const connection = mysql.createConnection({ user: 'root' });
 
 // use below to run from aws
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_DATABASE,
-  port: process.env.DB_PORT,
-});
+// const connection = mysql.createConnection({
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASS,
+//   database: process.env.DB_DATABASE,
+//   port: process.env.DB_PORT,
+// });
 
 const db = Promise.promisifyAll(connection, { multiArgs: true });
 

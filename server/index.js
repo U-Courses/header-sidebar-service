@@ -33,3 +33,55 @@ app.get('/courses/:courseId/header', (req, res) => {
       res.status(500).send(err);
     });
 });
+
+
+app.put('/courses/:courseId', (req, res) => {
+  const obj = {
+    rowToUpdate: req.params.rowToUpdate,
+    newContent: req.params.newContent,
+    fieldToUpdate: req.params.fieldToUpdate,
+    rowValue: req.params.courseId,
+  };
+  models.Course.updateCourseData(obj)
+    .then(() => res.status(200).send())
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.post('/courses', (req, res) => {
+  const obj = {
+    title: req.params.title,
+    tag: req.params.tag,
+    avg_rating: req.params.avg_rating,
+    total_ratings: req.params.total_ratings,
+    enrollment: req.params.enrollment,
+    created_by: req.params.created_by,
+    last_updated: req.params.last_updated,
+    language: req.params.language,
+    img_url: req.params.img_url,
+    list_price: req.params.list_price,
+    discount_price: req.params.discount_price,
+    video_hrs: req.params.video_hrs,
+    total_articles: req.params.total_articles,
+    total_downloads: req.params.total_downloads,
+    active_coupon: req.params.active_coupon,
+    ccOptions: req.params.ccOptions,
+  };
+  models.Course.setCourseData(obj)
+    .then(() => res.status(200).send())
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.delete('/courses/:courseId/', (req, res) => {
+  const obj = {
+    id: req.params.courseId,
+  };
+  models.Course.deleteCourseData(obj)
+    .then(() => res.status(200).send())
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
