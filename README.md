@@ -37,8 +37,8 @@ npm run seed
 npm run build
 nom start
 
-**API Routes**
-|     Method    |          Endpoint          |                     Description          |
+# API Routes
+|     Method    |          Endpoint          |               Description                |
 | ------------- | -------------------------  | -----------------------------------------|
 |      Get      |   /courses/:courseId       | get a specific course's details          |
 |      Post     |        /courses/           | add a course                             |
