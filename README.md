@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Shanes-Disciples/student-feedback
+  - https://github.com/Shanes-Disciples/students-also-bought-service
+  - https://github.com/Shanes-Disciples/instructors-service
+  - https://github.com/Shanes-Disciples/header-sidebar-service
 
 ## Table of Contents
 
@@ -36,3 +36,12 @@ npm install
 npm run seed
 npm run build
 nom start
+
+# API Routes
+|     Method    |          Endpoint          |               Description                |
+| ------------- | -------------------------  | -----------------------------------------|
+|      Get      |   /courses/:courseId       | get a specific course's details          |
+|      Post     |        /courses/           | add a course                             |
+|      Put      |   /courses/:courseId       | replace a course's details               |
+|     Patch     |   /courses/:courseId       | update a course's details                |
+|     Delete    |   /courses/:courseId       | delete a course's details                |
