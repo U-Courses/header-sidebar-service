@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Shanes-Disciples/student-feedback
+  - https://github.com/Shanes-Disciples/students-also-bought-service
+  - https://github.com/Shanes-Disciples/instructors-service
+  - https://github.com/Shanes-Disciples/header-sidebar-service
 
 ## Table of Contents
 
