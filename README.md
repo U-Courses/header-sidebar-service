@@ -36,3 +36,12 @@ npm install
 npm run seed
 npm run build
 nom start
+
+**API Routes**
+|     Method    |          Endpoint          |                     Description          |
+| ------------- | -------------------------  | -----------------------------------------|
+|      Get      |   /courses/:courseId       | get a specific course's details          |
+|      Post     |        /courses/           | add a course                             |
+|      Put      |   /courses/:courseId       | replace a course's details               |
+|     Patch     |   /courses/:courseId       | update a course's details                |
+|     Delete    |   /courses/:courseId       | delete a course's details                |
