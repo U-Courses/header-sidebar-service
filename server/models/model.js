@@ -37,13 +37,13 @@ class Model {
   }
 
   setCourseData(data) {
-    const params = [data.title, data.tag, data.avg_rating, data.total_ratings, data.enrollment,
+    const params = [data.title, data.description, data.tag, data.avg_rating, data.total_ratings, data.enrollment,
       data.created_by, data.last_updated, data.language, data.img_url, data.list_price,
       data.discount_price, data.video_hrs, data.total_articles, data.total_downloads, 
       data.active_coupon, data.ccOptions];
     const queryStr = `
     INSERT INTO ${this.tablename} 
-    (title, tag, avg_rating, total_ratings, enrollment, created_by, last_updated,
+    (title, description, tag, avg_rating, total_ratings, enrollment, created_by, last_updated,
     language, img_url, list_price, discount_price, video_hrs, total_articles, total_downloads,
     active_coupon, ccOptions) 
     VALUES (? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?);

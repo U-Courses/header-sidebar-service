@@ -52,6 +52,7 @@ app.put('/courses/:courseId', (req, res) => {
 app.post('/courses', (req, res) => {
   const obj = {
     title: req.params.title,
+    description: req.params.description,
     tag: req.params.tag,
     avg_rating: req.params.avg_rating,
     total_ratings: req.params.total_ratings,

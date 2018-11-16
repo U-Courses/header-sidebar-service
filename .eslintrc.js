@@ -11,6 +11,7 @@ module.exports = {
       "js": "ignorePackages",
       "jsx": "ignorePackages",
     }],
+    'no-plusplus': 'off',
   },
 };
 
