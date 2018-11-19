@@ -102,3 +102,23 @@
 //   });
 
 // module.exports = db;
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/test');
+
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function () {
+//   console.log('Connected');
+// });
+
+const mongoose = require('mongoose');
+const mongoUri = 'mongodb://localhost/headerSidebar';
+mongoose.connect(mongoUri);
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  console.log('Connected');
+});
+
+module.exports = db;

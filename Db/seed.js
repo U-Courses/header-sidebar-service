@@ -21,14 +21,17 @@ const languagesAvailable = () => {
   return languages;
 };
 
-const wstream = fs.createWriteStream('./textfiles/seedFile2.tsv');
+const wstream = fs.createWriteStream('./textfiles/seedFile.csv');
+wstream.write(
+  '_id,title,description,tag,avgRating,totalRatings,enrollment,createdBy,lastUpdated,language,ccOptions,imgURL,listPrice,discountPrice,videoHrs,totalArticles,totalDownloads,activeCoupon\n',
+);
 const csvGenerator = (index) => {
   for (let i = index; i <= 10000000; i++) {
     const price = faker.finance.amount();
     const languagesUsed = languagesAvailable();
     const title = faker.lorem.sentence();
     const description = faker.lorem.sentence();
-    const tag = faker.random.word();
+    const tag = faker.name.firstName();
     const avgRating = faker.finance.amount(1, 5, 1);
     const totalRatings = faker.random.number(100);
     const enrollment = faker.random.number(100);
@@ -37,29 +40,25 @@ const csvGenerator = (index) => {
     const language = languagesUsed;
     const ccOptions = languagesUsed;
     const imgURL = faker.image.avatar();
-    const listPrice = `$${price}`;
-    const discountPrice = `$${price > 0.01 ? (price - 0.01).toFixed(2) : price}`;
+    const listPrice = `${price}`;
+    const discountPrice = `${price > 0.01 ? (price - 0.01).toFixed(2) : price}`;
     const videoHrs = faker.finance.amount(1, 20, 1);
     const totalArticles = faker.random.number(20);
     const totalDownloads = faker.random.number(1000);
     const activeCoupon = 'DISCIPLEOFSHANE';
 
     if (!wstream.write(
-      `${i}\t${title}\t${description}\t${tag}\t${avgRating}\t${totalRatings}\t${enrollment}\t${createdBy}\t${lastUpdated}\t"${language}"\t"${ccOptions}"\t${imgURL}\t${listPrice}\t${discountPrice}\t${videoHrs}\t${totalArticles}\t${totalDownloads}\t${activeCoupon}\n`,
+      `${i},${title},${description},${tag},${avgRating},${totalRatings},${enrollment},${createdBy},${lastUpdated},"${language}","${ccOptions}",${imgURL},${listPrice},${discountPrice},${videoHrs},${totalArticles},${totalDownloads},${activeCoupon}\n`,
     )) {
       wstream.once('drain', () => csvGenerator(i + 1));
       return;
     }
   }
-  wstream.on('error', (err) => {
-    console.log(err.message);
-  });
+  const t1 = performance.now();
+  console.log('Seed ended...');
+  console.log("Seeding took: " + (t1 - t0) + " milliseconds.");
   wstream.end();
 };
-
-console.log('Starting file write...');
+console.log('Seed starting...');
 const t0 = performance.now();
 csvGenerator(1);
-const t1 = performance.now();
-
-console.log(`Time to create: ${(t1 - t0)} milliseconds`);

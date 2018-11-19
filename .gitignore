@@ -25,3 +25,4 @@ db.sql
 bundle.js
 *.env
 *.csv
+*.tsv
