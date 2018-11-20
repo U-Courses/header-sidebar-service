@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import TagRatingsEnroll from './TagRatingsEnroll.jsx';
 import styles from '../styles/Header.css';
+const moment = require('moment');
 
 const Header = ({ course }) => (
   <div className={ styles.leftCol }>
@@ -14,8 +15,8 @@ const Header = ({ course }) => (
       <TagRatingsEnroll course={ course } isHeaderFixed={ false }/>
       <section className={ styles.authorUpdateContainer }>
         <div className={ styles.authorUpdate }>
-          <div className={ styles.author }>{ `Created by ${course.created_by}` }</div>
-          <div className={ styles.update }>{ `Last updated ${course.last_updated}` }</div>
+          <div className={ styles.author }>{ `Created by ${course.createdBy}` }</div>
+          <div className={ styles.update }>{ `Last updated ${moment(course.lastUpdated).fromNow()}` }</div>
         </div>
       </section>
       <section className={ styles.languagesContainer }>
@@ -29,7 +30,7 @@ const Header = ({ course }) => (
           </div>
           <div>
           { course.ccOptions
-              && <span>{ `${course.ccOptions.join(', ')} [Auto-generated]` }</span>
+              && <span>{ `${course.ccOptions} [Auto-generated]` }</span>
           }
           </div>
         </div>

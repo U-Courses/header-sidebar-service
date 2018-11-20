@@ -54,7 +54,7 @@ class FixedSidebar extends React.Component {
     let coupon;
     if (!this.state.hasCoupon) {
       coupon = <CouponDefault couponClickHandler={ this.couponClickHandler }
-        active_coupon={ course.active_coupon } />;
+        active_coupon={ course.activeCoupon } />;
     } else {
       coupon = <CouponForm couponInputValue={ this.state.couponFormInput }
       couponInputChangeHandler={ this.couponInputChangeHandler }
@@ -66,10 +66,10 @@ class FixedSidebar extends React.Component {
         <div className={ fixedStyles.fixedSideBarContainer }>
           <div className={ styles.belowTrailer }>
             <PurchaseBox discount_price={ discountPrice }
-              list_price={ course.list_price } />
-            <Features video_hrs={ course.video_hrs } total_articles={ course.total_articles }
+              list_price={ course.listPrice } />
+            <Features video_hrs={ course.videoHrs } total_articles={ course.totalArticles }
             />
-            <Interactives total_downloads={ course.total_downloads }/>
+            <Interactives total_downloads={ course.totalDownloads }/>
             <section className={ styles.couponBox }>
               { coupon }
             </section>

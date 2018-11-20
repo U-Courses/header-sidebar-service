@@ -41,11 +41,12 @@ class App extends React.Component {
     // window.location.pathname === '/courses/66/'
     requests.getCourseData(window.location.pathname)
       .then(data => (
+        console.log('This is in app: ', data[0]),
         this.setState({
-          courseId: data.id,
-          courseData: data,
-          discountPrice: data.discount_price,
-          listPrice: data.list_price,
+          courseId: data[0]._id,
+          courseData: data[0],
+          discountPrice: data[0].discountPrice,
+          listPrice: data[0].listPrice,
         })
       ));
   }

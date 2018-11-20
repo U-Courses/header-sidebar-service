@@ -27,9 +27,20 @@ const courseSchema = new mongoose.Schema({
   totalArticles: Number,
   totalDownloads: Number,
   activeCoupon: String,
-});
+},
+{ collection: 'course' });
 
 const Course = mongoose.model('Course', courseSchema);
+
+const getCourseData = (courseId, callback) => Course.find({ _id: courseId }).exec(callback);
+
+// getCourseData(courseId) {
+//   const queryStr = `SELECT * FROM ${this.tablename} WHERE id = ${courseId}`;
+//   return executeQuery(queryStr);
+// }
+// const getBlogs = (callback) => {
+//   Blog.find({}).sort({ createdAt: 'desc' }).exec(callback);
+// }
 
 // const csvData = [];
 // const readStream = fs.createReadStream('./textfiles/seedFile3.csv');
@@ -94,4 +105,4 @@ const Course = mongoose.model('Course', courseSchema);
 // const fromCSV = [];
 
 
-// module.exports = Course;
+module.exports.getCourseData = getCourseData;

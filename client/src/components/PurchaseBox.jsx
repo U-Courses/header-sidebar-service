@@ -1,16 +1,29 @@
 import React from 'react';
 import styles from '../styles/PurchaseBox.css';
 
+// const percentOff = (discount, list) => {
+//   // initial state has empty data
+//   if (discount === undefined || list === undefined) {
+//     return '0%';
+//   }
+
+//   const discountNum = Number(discount.split('$')[1]);
+//   const listNum = Number(list.split('$')[1]);
+//   console.log(discount, list);
+//   // percentage off rounded and set as string
+//   const totalPercentOff = ((listNum - discountNum) / listNum).toFixed(2).split('.')[1];
+//   return `${totalPercentOff}%`;
+// };
+
 const percentOff = (discount, list) => {
   // initial state has empty data
   if (discount === undefined || list === undefined) {
     return '0%';
   }
 
-  const discountNum = Number(discount.split('$')[1]);
-  const listNum = Number(list.split('$')[1]);
+  console.log(discount, list);
   // percentage off rounded and set as string
-  const totalPercentOff = ((listNum - discountNum) / listNum).toFixed(2).split('.')[1];
+  const totalPercentOff = ((list - discount) / list).toFixed(2).split('.')[1];
   return `${totalPercentOff}%`;
 };
 
