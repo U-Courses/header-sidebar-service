@@ -6,20 +6,19 @@ const percentOff = (discount, list) => {
   if (discount === undefined || list === undefined) {
     return '0%';
   }
-
-  const discountNum = Number(discount.split('$')[1]);
-  const listNum = Number(list.split('$')[1]);
-  // percentage off rounded and set as string
-  const totalPercentOff = ((listNum - discountNum) / listNum).toFixed(2).split('.')[1];
+  const totalPercentOff = ((list - discount) / list).toFixed(2).split('.')[1];
+  if (Number(totalPercentOff) < 10) {
+    return `${totalPercentOff.slice(1)}%`;
+  }
   return `${totalPercentOff}%`;
 };
 
 const PurchaseBox = ({ discount_price, list_price }) => (
   <section>
     <div className={ styles.priceBox }>
-      <div className={ `${styles.discountPrice} ${styles.price}` }><strong>{ discount_price }</strong></div>
-      <div className={ `${styles.listPrice} ${styles.price}` }>{ list_price }</div>
-      <div className={ `${styles.percentOffItem} ${styles.price}` }><span>{ `${percentOff(discount_price, list_price)} off` }</span></div>
+      <div className={ `${styles.discountPrice} ${styles.price}` }><strong>{ `$${discount_price}` }</strong></div>
+      <div className={ `${styles.listPrice} ${styles.price}` }>{ `$${list_price}` }</div>
+        <div className={`${styles.percentOffItem} ${styles.price}`}><span>{`${percentOff(discount_price, list_price)} off` }</span></div>
     </div>
     <div className={ styles.btnBox }>
       <button className={ `${styles.cartAddBtn} ${styles.buyBtn}` }>Add to Cart</button>

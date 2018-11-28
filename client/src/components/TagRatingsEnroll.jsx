@@ -10,14 +10,14 @@ const TagRatingsEnroll = ({ course, isHeaderFixed }) => {
       style.marginRight = '15px';
     }
 
-    if (course.tag === 'Best Seller') {
+    if (course.tag.length < 4) {
       style.background = '#f4c150';
-    } else if (course.tag === 'Highest Rated') {
+    } else if (course.tag.length < 5) {
       style.background = '#f59c49';
-    } else if (course.tag === 'Hot & New') {
+    } else if (course.tag.length < 6) {
       style.background = '#ec5252';
       style.color = '#fff';
-    } else if (course.tag === 'New') {
+    } else if (course.tag.length >= 6) {
       style.background = '#46c28e';
       style.color = '#fff';
     }
@@ -31,9 +31,9 @@ const TagRatingsEnroll = ({ course, isHeaderFixed }) => {
         style={ tagStyle() }>{ course.tag }</div> // Render if tag is not null
     }
       <div className={ styles.ratings }>
-        <HeaderStars avgRating={ course.avg_rating }/>
-        <span className={ styles.avgRating }>{ course.avg_rating }</span>
-        <span>{ `(${course.total_ratings} ratings)` }</span>
+        <HeaderStars avgRating={course.avgRating }/>
+        <span className={styles.avgRating}>{course.avgRating }</span>
+        <span>{ `(${course.totalRatings} ratings)` }</span>
       </div>
       <div>{ `${course.enrollment} students enrolled` }</div>
     </section>

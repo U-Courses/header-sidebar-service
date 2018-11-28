@@ -10,7 +10,7 @@ const Trailer = (props) => {
     <section className={ styles.trailerBox }>
       <div className={ styles.trailerContainer }>
         <div className={ styles.trailer }>
-          <img alt="" className={ `${styles.courseImg} ${styles.sidebarImg}` } src="http://www.avsnap.com/a_downloads/backgrounds/SpaceT%20640x480.png" /> 
+          <img alt="" className={`${styles.courseImg} ${styles.sidebarImg}`} src="http://www.bigfoto.com/sites/main/aegeri-lake-switzerland.JPG" />
           <div className={ `${styles.playbtn} ${styles.sidebarImg}` }
             onMouseEnter={ () => props.trailerHoverHandler() }
             onMouseLeave={ () => props.trailerHoverHandler() }>

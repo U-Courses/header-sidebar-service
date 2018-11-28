@@ -24,3 +24,8 @@ coverage
 db.sql
 bundle.js
 *.env
+*.csv
+*.tsv
+
+# NewRelic
+newrelicKey.js
