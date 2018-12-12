@@ -26,6 +26,6 @@ app.get('/courses/:courseId/header', (req, res) => {
   });
 });
 
-app.get('/loaderio-2a46e6786f974a329936545245baf043', (req, res) => {
-  res.send('loaderio-2a46e6786f974a329936545245baf043');
+app.get('/loaderio-fb467fba958c6b4bbf17708903f3c4b2', (req, res) => {
+  res.send('loaderio-fb467fba958c6b4bbf17708903f3c4b2');
 });

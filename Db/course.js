@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Redis = require('../Db/index.js');
 const db = require('./index.js');
 
 const courseSchema = new mongoose.Schema({
